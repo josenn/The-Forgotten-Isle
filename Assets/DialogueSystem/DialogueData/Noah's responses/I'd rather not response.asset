@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98aaf9976ec7ab4f983d8df0c3060a0, type: 3}
+  m_Name: I'd rather not response
+  m_EditorClassIdentifier: 
+  dialogue:
+  - Please, can you? I promise I won't involve you any further.
+  - Can you let Ash know I have their bike and they can come get it anytime?
+  responses:
+  - responseTextPos: Sure thing.
+    responseTextNeg: I'd rather not get involved.
+    dialogObject: {fileID: 11400000, guid: 05d9eb47f08a2874eb0431017ba7a35b, type: 2}
+  - responseTextPos: 
+    responseTextNeg: 
+    dialogObject: {fileID: 11400000}
