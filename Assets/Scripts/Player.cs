@@ -5,14 +5,14 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] float movementSpeed = 1.0f;
-    private Rigidbody2D rb2D;
+    private Rigidbody rb;
     private SpriteRenderer playerSprite;
-    private Vector2 inputVector = Vector2.zero;
+    private Vector3 inputVector = Vector3.zero;
 
     // Start is called before the first frame update
     void Start()
     {
-        rb2D = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody>();
         playerSprite = GetComponent<SpriteRenderer>();
     }
 
@@ -35,17 +35,20 @@ public class Player : MonoBehaviour
         }
     }
 
+    // Moves the player
     void Movement()
     {
-        Vector2 pos = rb2D.position;
+        Vector3 pos = rb.position;
         inputVector.x = Input.GetAxisRaw("Horizontal");
-        inputVector.y = Input.GetAxisRaw("Vertical");
+        inputVector.z = Input.GetAxisRaw("Vertical");
         inputVector.Normalize();
+        
+        
 
         FlipSprite(inputVector.x);
 
-        Vector2 newPos = pos + inputVector * movementSpeed * Time.fixedDeltaTime;
+        Vector3 newPos = pos + inputVector * movementSpeed * Time.fixedDeltaTime;
 
-        rb2D.MovePosition(newPos);
+        rb.MovePosition(newPos);
     }
 }
