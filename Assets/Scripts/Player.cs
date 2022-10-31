@@ -8,6 +8,21 @@ public class Player : MonoBehaviour
     private Rigidbody rb;
     public SpriteRenderer playerSprite;
     private Vector3 inputVector = Vector3.zero;
+    public Camera playerCamera;
+
+    private Vector3 GetCameraForward(Camera playerCamera)
+    {
+        Vector3 forward = playerCamera.transform.forward;
+        forward.y = 0;
+        return forward.normalized;
+    }
+
+    private Vector3 GetCameraRight(Camera playerCamera)
+    {
+        Vector3 right = playerCamera.transform.right;
+        right.y = 0;
+        return right.normalized;
+    }
 
     // Start is called before the first frame update
     void Start()
