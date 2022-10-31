@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 533392199706225752}
   - component: {fileID: 8311955490561240574}
-  - component: {fileID: 3123333623564308349}
-  - component: {fileID: 1743757488}
   - component: {fileID: 3450754664944727600}
+  - component: {fileID: 1743757488}
   - component: {fileID: 8925271920962298215}
+  - component: {fileID: 3123333623564308349}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -88,30 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3123333623564308349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3524404216153152301}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4374ea69ef3d89e43858a8d480fcb2e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementSpeed: 2
---- !u!210 &1743757488
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3524404216153152301}
-  m_Enabled: 1
-  m_SortingLayerID: -1994823187
-  m_SortingLayer: 2
-  m_SortingOrder: 0
 --- !u!50 &3450754664944727600
 Rigidbody2D:
   serializedVersion: 4
@@ -133,6 +109,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!210 &1743757488
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3524404216153152301}
+  m_Enabled: 1
+  m_SortingLayerID: -1994823187
+  m_SortingLayer: 2
+  m_SortingOrder: 0
 --- !u!70 &8925271920962298215
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -149,3 +136,16 @@ CapsuleCollider2D:
   m_Offset: {x: 0.0057832003, y: -0.056402206}
   m_Size: {x: 0.30669498, y: 0.6484194}
   m_Direction: 0
+--- !u!114 &3123333623564308349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3524404216153152301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4374ea69ef3d89e43858a8d480fcb2e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 2

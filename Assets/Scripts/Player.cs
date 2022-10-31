@@ -6,14 +6,14 @@ public class Player : MonoBehaviour
 {
     [SerializeField] float movementSpeed = 1.0f;
     private Rigidbody rb;
-    private SpriteRenderer playerSprite;
+    public SpriteRenderer playerSprite;
     private Vector3 inputVector = Vector3.zero;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        playerSprite = GetComponent<SpriteRenderer>();
+        
     }
 
     // Update is called once per frame
