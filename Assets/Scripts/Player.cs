@@ -4,51 +4,46 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] float movementSpeed = 1.0f;
-    private Rigidbody rb;
+    [SerializeField] float playerSpeed = 1.0f;
+    //private Rigidbody rb;
+    private CharacterController controller;
     private SpriteRenderer playerSprite;
     private Vector3 inputVector = Vector3.zero;
+    private Vector3 playerVelocity = Vector3.zero;
+    private bool groundedPlayer;
+    private float jumpHeight = 5.0f;
+    private float gravityValue = -9.81f;
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+       // rb = GetComponent<Rigidbody>();
+        controller = GetComponent<CharacterController>();
         playerSprite = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        Movement();
-    }
-
-    // Flip the Sprite horizontally if moving left or right
-    void FlipSprite(float axis)
-    {
-        if(axis > 0)
+        groundedPlayer = controller.isGrounded;
+        if(groundedPlayer && playerVelocity.y < 0)
         {
-            playerSprite.flipX = true;
+            playerVelocity.y = 0f;
         }
-        if(axis < 0)
+
+        Vector3 move = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
+        controller.Move(move * Time.deltaTime * playerSpeed);
+
+        if (move != Vector3.zero)
         {
-            playerSprite.flipX = false;
+            gameObject.transform.forward = move;
         }
-    }
 
-    // Moves the player
-    void Movement()
-    {
-        Vector3 pos = rb.position;
-        inputVector.x = Input.GetAxisRaw("Horizontal");
-        inputVector.z = Input.GetAxisRaw("Vertical");
-        inputVector.Normalize();
-        
-        
+        if (Input.GetButtonDown("Jump") && groundedPlayer)
+        {
+            playerVelocity.y += jumpHeight;
+        }
 
-        FlipSprite(inputVector.x);
-
-        Vector3 newPos = pos + inputVector * movementSpeed * Time.fixedDeltaTime;
-
-        rb.MovePosition(newPos);
+        playerVelocity.y += gravityValue * Time.deltaTime;
+        controller.Move(playerVelocity * Time.deltaTime);
     }
 }
