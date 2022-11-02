@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 48736979578512279}
   - component: {fileID: 5588641043122698893}
   m_Layer: 0
-  m_Name: grass cube
+  m_Name: grass cube single
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

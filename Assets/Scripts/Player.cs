@@ -12,6 +12,21 @@ public class Player : MonoBehaviour
     [SerializeField] float playerSpeed = 1.0f;
     private float jumpHeight = 1.0f;
     private float gravityValue = -9.81f;
+    public Camera playerCamera;
+
+    private Vector3 GetCameraForward(Camera playerCamera)
+    {
+        Vector3 forward = playerCamera.transform.forward;
+        forward.y = 0;
+        return forward.normalized;
+    }
+
+    private Vector3 GetCameraRight(Camera playerCamera)
+    {
+        Vector3 right = playerCamera.transform.right;
+        right.y = 0;
+        return right.normalized;
+    }
 
     // Start is called before the first frame update
     void Start()
