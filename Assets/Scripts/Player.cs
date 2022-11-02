@@ -48,8 +48,11 @@ public class Player : MonoBehaviour
         }
 
         PlayerJump();
-
-        Vector3 move = new Vector3(Input.GetAxisRaw("Horizontal"), playerVelocity.y, Input.GetAxisRaw("Vertical"));
+        
+        Vector3 forwardRelativeVerticalInput = Input.GetAxisRaw("Vertical") * GetCameraForward(playerCamera);
+        Vector3 rightRelativeHorizontalInput = Input.GetAxisRaw("Horizontal") * GetCameraRight(playerCamera);
+        Vector3 addJump = new Vector3(0, playerVelocity.y, 0);
+        Vector3 move = forwardRelativeVerticalInput + rightRelativeHorizontalInput + addJump;
         Vector3 direction = new Vector3 (Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
         controller.Move(move * Time.deltaTime * playerSpeed);
 
