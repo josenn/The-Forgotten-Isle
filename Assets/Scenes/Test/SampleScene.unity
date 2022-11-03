@@ -7136,6 +7136,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1165437572, guid: f1200b22f5cb64e47b5a3ab8187e108d, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 533392199706225752, guid: f1200b22f5cb64e47b5a3ab8187e108d, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -7188,6 +7192,10 @@ PrefabInstance:
       propertyPath: playerCamera
       value: 
       objectReference: {fileID: 592398630985046072}
+    - target: {fileID: 3123333623564308349, guid: f1200b22f5cb64e47b5a3ab8187e108d, type: 3}
+      propertyPath: spriteAnimator
+      value: 
+      objectReference: {fileID: 300009798}
     - target: {fileID: 3524404216153152301, guid: f1200b22f5cb64e47b5a3ab8187e108d, type: 3}
       propertyPath: m_Name
       value: Player

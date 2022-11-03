@@ -14,11 +14,19 @@ public class Player : MonoBehaviour
     private float gravityValue = -9.81f;
     public Camera playerCamera;
     [SerializeField] DialogueUI dialogueUI;
+    public Animator spriteAnimator;
+    private float lastMoveH;
+    private float lastMoveV;
+    public float idleSetDelay = 0.09f;
+    private bool isWalking = false;
+    private float movementX;
+    private float movementZ;
 
     public DialogueUI DialogueUI => dialogueUI;
 
     public IInteractable Interactable { get; set; }
 
+    //getting directional info from the camera
     private Vector3 GetCameraForward(Camera playerCamera)
     {
         Vector3 forward = playerCamera.transform.forward;
@@ -48,6 +56,15 @@ public class Player : MonoBehaviour
         {
             Interactable?.Interact(this);
         }
+
+        spriteAnimator.SetFloat("LastMoveHorizontal", lastMoveH);
+        spriteAnimator.SetFloat("LastMoveVertical", lastMoveV);
+
+        spriteAnimator.SetBool("isWalking", isWalking);
+
+        if(isWalking){
+           StartCoroutine(lastMoveSet(movementX, movementZ)); 
+        }
     }
 
     void PlayerMove()
@@ -59,12 +76,34 @@ public class Player : MonoBehaviour
 
         PlayerJump();
         
+        
         Vector3 forwardRelativeVerticalInput = Input.GetAxisRaw("Vertical") * GetCameraForward(playerCamera);
         Vector3 rightRelativeHorizontalInput = Input.GetAxisRaw("Horizontal") * GetCameraRight(playerCamera);
         Vector3 addJump = new Vector3(0, playerVelocity.y, 0);
         Vector3 move = forwardRelativeVerticalInput + rightRelativeHorizontalInput + addJump;
         Vector3 direction = new Vector3 (Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
         controller.Move(move * Time.deltaTime * playerSpeed);
+
+        movementX = (Input.GetAxisRaw("Horizontal") * Mathf.Abs(GetCameraRight(playerCamera).x));
+        movementZ = (Input.GetAxisRaw("Vertical") * Mathf.Abs(GetCameraForward(playerCamera).z));
+
+        //Set the parameters of the animator's blend tree to our inputs along with camera influence
+        spriteAnimator.SetFloat("Horizontal", movementX);
+        spriteAnimator.SetFloat("Vertical", movementZ);
+
+        //start coroutine to get delayed movement data for setting direction of idle state
+        
+
+        //for switching the animator to idle
+        if (movementX == 0f && movementZ == 0f)
+        {
+            isWalking = false;
+        }
+        else
+        {
+            isWalking = true;
+        }
+
 
     //     if (direction != Vector3.zero)
     //     {
@@ -80,5 +119,16 @@ public class Player : MonoBehaviour
         }
 
         playerVelocity.y += gravityValue * Time.deltaTime;
+    }
+
+    private IEnumerator lastMoveSet(float moveX, float moveZ){
+        //slight delay
+        yield return new WaitForSeconds(idleSetDelay);
+
+        
+        lastMoveH = moveX;
+        lastMoveV = moveZ;
+
+
     }
 }
