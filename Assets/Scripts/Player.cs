@@ -13,6 +13,11 @@ public class Player : MonoBehaviour
     private float jumpHeight = 1.0f;
     private float gravityValue = -9.81f;
     public Camera playerCamera;
+    [SerializeField] DialogueUI dialogueUI;
+
+    public DialogueUI DialogueUI => dialogueUI;
+
+    public IInteractable Interactable { get; set; }
 
     private Vector3 GetCameraForward(Camera playerCamera)
     {
@@ -38,6 +43,11 @@ public class Player : MonoBehaviour
     void Update()
     {
         PlayerMove();
+        if(dialogueUI.IsOpen) return;
+        if(Input.GetKeyDown(KeyCode.F))
+        {
+            Interactable?.Interact(this);
+        }
     }
 
     void PlayerMove()
