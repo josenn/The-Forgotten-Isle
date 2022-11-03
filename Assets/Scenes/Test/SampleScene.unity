@@ -7189,6 +7189,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1242823721}
     - target: {fileID: 3123333623564308349, guid: f1200b22f5cb64e47b5a3ab8187e108d, type: 3}
+      propertyPath: idleSetDelay
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 3123333623564308349, guid: f1200b22f5cb64e47b5a3ab8187e108d, type: 3}
       propertyPath: playerCamera
       value: 
       objectReference: {fileID: 592398630985046072}
