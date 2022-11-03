@@ -13,14 +13,10 @@ MonoBehaviour:
   m_Name: Test
   m_EditorClassIdentifier: 
   dialogue:
-  - 'This is my dialogue!
-
-    Hello'
-  - 'This is my second dialogue.
-
-    Bitch'
+  - Welcome to the Forgotten Isle
+  - 'Error: Most of the game is currently unimplemented'
   responses:
-  - responseText: Yes
+  - responseText: Test Response
     dialogueObject: {fileID: 11400000, guid: bb63e9c1ecd17be4baa627d9d01e5f7b, type: 2}
   - responseText: No
     dialogueObject: {fileID: 11400000, guid: 1c5788b6edabb0848818cee29541fd8c, type: 2}
