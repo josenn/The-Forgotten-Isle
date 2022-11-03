@@ -1,12 +1,12 @@
 fileFormatVersion: 2
-guid: 05cc8a4722c086c44b12b5d1458ba843
+guid: 5af48ac45522cb543b554ff69c4e0350
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -36,9 +36,9 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player Side Walk Anim_0
+      name: Player 45 Front Walk flipped_0
       rect:
         serializedVersion: 2
         x: 0
@@ -119,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f832e9127ecddae49b6c28209c363062
-      internalID: 1664875968
+      spriteID: f18fcdd22777e474db519181a2cfcc33
+      internalID: 362386106
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player Side Walk Anim_1
+      name: Player 45 Front Walk flipped_1
       rect:
         serializedVersion: 2
         x: 32
@@ -140,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1540d37c1c1eadc4486220907a45d7c7
-      internalID: 728613551
+      spriteID: 23c6416b9af2e3c4dbc2db483fedd1e0
+      internalID: -1975356095
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player Side Walk Anim_2
+      name: Player 45 Front Walk flipped_2
       rect:
         serializedVersion: 2
         x: 64
@@ -161,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63423f99fe2a09949affbe2f8a13f90d
-      internalID: -688378868
+      spriteID: 96e3869b61e303d40a506226a4be82f5
+      internalID: 16753361
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player Side Walk Anim_3
+      name: Player 45 Front Walk flipped_3
       rect:
         serializedVersion: 2
         x: 96
@@ -182,14 +182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9ff5de1f0eff1148afefeaa4a477335
-      internalID: -22268720
+      spriteID: e6f688b3be1c2e0499259848ff67a2f8
+      internalID: -1008348993
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player Side Walk Anim_4
+      name: Player 45 Front Walk flipped_4
       rect:
         serializedVersion: 2
         x: 128
@@ -203,14 +203,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8755c6f784c0cea4ab494a21c0bef277
-      internalID: -1626208850
+      spriteID: 5ef45893be0a45348920275fe274c0a8
+      internalID: 1916900412
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player Side Walk Anim_5
+      name: Player 45 Front Walk flipped_5
       rect:
         serializedVersion: 2
         x: 160
@@ -224,8 +224,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 048efed71aac1ee43965565585dd8232
-      internalID: -457635010
+      spriteID: 84830faf20b40e24292689d2233386c2
+      internalID: -1595825086
       vertices: []
       indices: 
       edges: []
@@ -233,7 +233,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: f4ea745d125703b45a7c7c5ed5c0ede9
+    spriteID: 0d36dff841a21f64f9af3eb39b4ff56d
     internalID: 0
     vertices: []
     indices: 
@@ -241,12 +241,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Player Side Walk Anim_0: 1664875968
-      Player Side Walk Anim_2: -688378868
-      Player Side Walk Anim_5: -457635010
-      Player Side Walk Anim_1: 728613551
-      Player Side Walk Anim_3: -22268720
-      Player Side Walk Anim_4: -1626208850
+      Player 45 Front Walk flipped_4: 1916900412
+      Player 45 Front Walk flipped_0: 362386106
+      Player 45 Front Walk flipped_2: 16753361
+      Player 45 Front Walk flipped_3: -1008348993
+      Player 45 Front Walk flipped_1: -1975356095
+      Player 45 Front Walk flipped_5: -1595825086
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
