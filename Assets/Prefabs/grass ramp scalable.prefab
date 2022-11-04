@@ -200,7 +200,7 @@ PrefabInstance:
     - target: {fileID: -7635826562936255635, guid: 7433f7fa96416f743bdbec00c20303cc, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 57518e1afe636dc409b8a84372d17ca6, type: 2}
+      objectReference: {fileID: 2100000, guid: 2aa01398f6097214098a5250dd55074f, type: 2}
     - target: {fileID: 919132149155446097, guid: 7433f7fa96416f743bdbec00c20303cc, type: 3}
       propertyPath: m_Name
       value: ramp sides
