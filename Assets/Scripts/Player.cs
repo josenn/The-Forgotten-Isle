@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    //private Rigidbody rb;
     private CharacterController controller;
     private SpriteRenderer playerSprite;
     private Vector3 inputVector = Vector3.zero;
@@ -14,9 +13,7 @@ public class Player : MonoBehaviour
     private float gravityValue = -9.81f;
     public Camera playerCamera;
     [SerializeField] DialogueUI dialogueUI;
-
     public DialogueUI DialogueUI => dialogueUI;
-
     public IInteractable Interactable { get; set; }
 
     private Vector3 GetCameraForward(Camera playerCamera)
@@ -42,8 +39,8 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        // if(dialogueUI.IsOpen) return;
         PlayerMove();
-        if(dialogueUI.IsOpen) return;
         if(Input.GetKeyDown(KeyCode.F))
         {
             Interactable?.Interact(this);
@@ -63,13 +60,7 @@ public class Player : MonoBehaviour
         Vector3 rightRelativeHorizontalInput = Input.GetAxisRaw("Horizontal") * GetCameraRight(playerCamera);
         Vector3 addJump = new Vector3(0, playerVelocity.y, 0);
         Vector3 move = forwardRelativeVerticalInput + rightRelativeHorizontalInput + addJump;
-        Vector3 direction = new Vector3 (Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
         controller.Move(move * Time.deltaTime * playerSpeed);
-
-    //     if (direction != Vector3.zero)
-    //     {
-    //         gameObject.transform.forward = direction;
-    //     }
     }
 
     private void PlayerJump()
