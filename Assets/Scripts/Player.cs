@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
     private bool isWalking = false;
     private float movementX;
     private float movementZ;
+    bool isStopped = true;
 
     public DialogueUI DialogueUI => dialogueUI;
 
@@ -57,6 +58,14 @@ public class Player : MonoBehaviour
         {
             Interactable?.Interact(this);
         }
+
+        if (controller.velocity.x == 0f && controller.velocity.z == 0f){
+            isStopped = true;
+        }
+        else{
+            isStopped = false;
+        }
+        spriteAnimator.SetBool("beenStopped", isStopped);
 
         spriteAnimator.SetFloat("LastMoveHorizontal", lastMoveH);
         spriteAnimator.SetFloat("LastMoveVertical", lastMoveV);
@@ -127,12 +136,12 @@ public class Player : MonoBehaviour
     }
 
     private IEnumerator lastMoveSet(float moveX, float moveZ){
-        //slight delay
-        yield return new WaitForSeconds(idleSetDelay);
-
+    
         
-        lastMoveH = moveX;
-        lastMoveV = moveZ;
+        lastMoveH = Mathf.Lerp(lastMoveH, moveX, Time.deltaTime * idleSetDelay);
+        lastMoveV = Mathf.Lerp(lastMoveV, moveZ, Time.deltaTime * idleSetDelay);
+
+        yield return null;
 
     }
 }
