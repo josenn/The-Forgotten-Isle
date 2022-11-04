@@ -51,6 +51,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         PlayerMove();
+
         if(dialogueUI.IsOpen) return;
         if(Input.GetKeyDown(KeyCode.F))
         {
@@ -59,12 +60,17 @@ public class Player : MonoBehaviour
 
         spriteAnimator.SetFloat("LastMoveHorizontal", lastMoveH);
         spriteAnimator.SetFloat("LastMoveVertical", lastMoveV);
-
+        
         spriteAnimator.SetBool("isWalking", isWalking);
-
+        //Set the parameters of the animator's blend tree to our inputs along with camera influence
+        spriteAnimator.SetFloat("Horizontal", movementX);
+        spriteAnimator.SetFloat("Vertical", movementZ);
+        //start coroutine to get delayed movement data for setting direction of idle state
         if(isWalking){
            StartCoroutine(lastMoveSet(movementX, movementZ)); 
         }
+
+        Debug.Log("X: " + movementX + ". Z: " + movementZ + ".");
     }
 
     void PlayerMove()
@@ -87,11 +93,10 @@ public class Player : MonoBehaviour
         movementX = (Input.GetAxisRaw("Horizontal") * Mathf.Abs(GetCameraRight(playerCamera).x));
         movementZ = (Input.GetAxisRaw("Vertical") * Mathf.Abs(GetCameraForward(playerCamera).z));
 
-        //Set the parameters of the animator's blend tree to our inputs along with camera influence
-        spriteAnimator.SetFloat("Horizontal", movementX);
-        spriteAnimator.SetFloat("Vertical", movementZ);
+        
+        
 
-        //start coroutine to get delayed movement data for setting direction of idle state
+        
         
 
         //for switching the animator to idle
@@ -128,7 +133,6 @@ public class Player : MonoBehaviour
         
         lastMoveH = moveX;
         lastMoveV = moveZ;
-
 
     }
 }
