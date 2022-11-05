@@ -1570,6 +1570,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1242823721}
     - target: {fileID: 3123333623564308349, guid: f1200b22f5cb64e47b5a3ab8187e108d, type: 3}
+      propertyPath: playerSpeed
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3123333623564308349, guid: f1200b22f5cb64e47b5a3ab8187e108d, type: 3}
       propertyPath: idleSetDelay
       value: 20
       objectReference: {fileID: 0}
@@ -1692,8 +1696,8 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.8572514, b: 0.76862746, a: 1}
-  m_Intensity: 0.8
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 0.7
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208

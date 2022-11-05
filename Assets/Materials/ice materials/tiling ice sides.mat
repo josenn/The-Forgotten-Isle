@@ -38,8 +38,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Metallic: 0
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _Smoothness: 0
     m_Colors:
     - _Scale_multiplier: {r: 20, g: 20, b: 0, a: 0}
     - _Scale_multiplier_1: {r: 5, g: 20, b: 0, a: 0}
