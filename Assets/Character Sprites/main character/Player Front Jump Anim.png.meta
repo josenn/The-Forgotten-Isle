@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 68486efe4dacc834e9cac2344e3dc970
+guid: 2bf68257df643ad448c9b5d9c67fa59a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -106,7 +106,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player Back Walk Anim_0
+      name: Player Front Jump Anim_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,14 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a2800a6d86730c4e9ead10dde4d0b1d
-      internalID: 2140702002
+      spriteID: d4122d6626db31e4687cc70acf6b366c
+      internalID: -1256683639
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player Back Walk Anim_1
+      name: Player Front Jump Anim_1
       rect:
         serializedVersion: 2
         x: 32
@@ -152,14 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 103855035514fbe41b30b6f8a9abdebc
-      internalID: -1973441617
+      spriteID: 08aa373a961cabc42806906449330601
+      internalID: 1463607551
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player Back Walk Anim_2
+      name: Player Front Jump Anim_2
       rect:
         serializedVersion: 2
         x: 64
@@ -173,14 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78f14fdb79255c04baf09abb5c2ab46b
-      internalID: 1733841614
+      spriteID: 45982f703aaadad49a8a977202d5534e
+      internalID: -1731825590
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player Back Walk Anim_3
+      name: Player Front Jump Anim_3
       rect:
         serializedVersion: 2
         x: 96
@@ -194,50 +194,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42ca31b5eea591b409ddc187f8f498cb
-      internalID: -623287947
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player Back Walk Anim_4
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1c875607fd619ec41a03b4734f7ce311
-      internalID: -1341348293
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player Back Walk Anim_5
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e61169521ea34a04b8ecf3c9257ecd20
-      internalID: 1148023890
+      spriteID: df3ba3e187936ac41a9f0f8b8ac80264
+      internalID: 1304780212
       vertices: []
       indices: 
       edges: []
@@ -245,7 +203,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ce16ae5b72f25d142a548af2405e279e
+    spriteID: 86e43a34a6b331943baaca493114bd45
     internalID: 0
     vertices: []
     indices: 
@@ -253,12 +211,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Player Back Walk Anim_5: 1148023890
-      Player Back Walk Anim_1: -1973441617
-      Player Back Walk Anim_4: -1341348293
-      Player Back Walk Anim_3: -623287947
-      Player Back Walk Anim_2: 1733841614
-      Player Back Walk Anim_0: 2140702002
+      Player Front Jump Anim_0: -1256683639
+      Player Front Jump Anim_3: 1304780212
+      Player Front Jump Anim_2: -1731825590
+      Player Front Jump Anim_1: 1463607551
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
