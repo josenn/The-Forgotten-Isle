@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
     private float movementX;
     private float movementZ;
     bool isStopped = true;
+    public bool allowedToMove = true;
 
     public DialogueUI DialogueUI => dialogueUI;
 
@@ -51,7 +52,9 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        PlayerMove();
+        if (allowedToMove){
+            PlayerMove();
+        }
 
         if(dialogueUI.IsOpen) return;
         if(Input.GetKeyDown(KeyCode.F))

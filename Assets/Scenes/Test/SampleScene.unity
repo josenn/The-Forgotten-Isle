@@ -8263,6 +8263,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 121042704265028954, guid: 5ae5106cf5f932f4a9b55b1cb73c925d, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 533392198990301592}
     - target: {fileID: 121042704265028955, guid: 5ae5106cf5f932f4a9b55b1cb73c925d, type: 3}
       propertyPath: m_Name
       value: DialogueCanvas
@@ -13286,7 +13290,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5963092724009837561, guid: 186cc59fba6acc442a25017501a3f374, type: 3}
       propertyPath: m_Name
-      value: time dial (1)
+      value: time dial snowy
       objectReference: {fileID: 0}
     - target: {fileID: 6452243819539921219, guid: 186cc59fba6acc442a25017501a3f374, type: 3}
       propertyPath: m_RootOrder
@@ -13306,7 +13310,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6452243819539921219, guid: 186cc59fba6acc442a25017501a3f374, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.70710784
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6452243819539921219, guid: 186cc59fba6acc442a25017501a3f374, type: 3}
       propertyPath: m_LocalRotation.x
@@ -13314,7 +13318,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6452243819539921219, guid: 186cc59fba6acc442a25017501a3f374, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071058
+      value: 0.000000044703484
       objectReference: {fileID: 0}
     - target: {fileID: 6452243819539921219, guid: 186cc59fba6acc442a25017501a3f374, type: 3}
       propertyPath: m_LocalRotation.z
@@ -13326,7 +13330,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6452243819539921219, guid: 186cc59fba6acc442a25017501a3f374, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6452243819539921219, guid: 186cc59fba6acc442a25017501a3f374, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -14929,6 +14933,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 533392199706225752, guid: f1200b22f5cb64e47b5a3ab8187e108d, type: 3}
   m_PrefabInstance: {fileID: 800859598}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &533392198990301592 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3123333623564308349, guid: f1200b22f5cb64e47b5a3ab8187e108d, type: 3}
+  m_PrefabInstance: {fileID: 800859598}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4374ea69ef3d89e43858a8d480fcb2e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &592398630985046068
 PrefabInstance:
   m_ObjectHideFlags: 0
