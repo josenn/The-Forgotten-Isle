@@ -23,6 +23,9 @@ public class Player : MonoBehaviour
     private float movementZ;
     bool isStopped = true;
     public bool allowedToMove = true;
+    public Inventory inventory;
+    [SerializeField] private UI_Inventory uiInventory;
+
 
     public DialogueUI DialogueUI => dialogueUI;
 
@@ -43,15 +46,18 @@ public class Player : MonoBehaviour
         return right.normalized;
     }
 
-    // Start is called before the first frame update
+
     void Start()
     {
         controller = GetComponent<CharacterController>();
         playerSprite = GetComponent<SpriteRenderer>();
+        inventory = new Inventory();
+        uiInventory.SetInventory(inventory);
     }
 
     void Update()
     {
+
         if (allowedToMove){
             PlayerMove();
         }
@@ -82,7 +88,7 @@ public class Player : MonoBehaviour
            StartCoroutine(lastMoveSet(movementX, movementZ)); 
         }
 
-        Debug.Log("X: " + movementX + ". Z: " + movementZ + ".");
+        //Debug.Log("X: " + movementX + ". Z: " + movementZ + ".");
     }
 
     void PlayerMove()
