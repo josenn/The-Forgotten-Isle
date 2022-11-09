@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
     public bool allowedToMove = true;
     public Inventory inventory;
     [SerializeField] private UI_Inventory uiInventory;
+    public bool allowedToInteract = true;
 
 
     public DialogueUI DialogueUI => dialogueUI;
@@ -56,6 +57,29 @@ public class Player : MonoBehaviour
     }
 
 
+    void OnTriggerStay (Collider other){
+        if (other.CompareTag("TimeDial")) {
+            TimeDialActivator timeDial = other.gameObject.GetComponent<TimeDialActivator>();
+            if (allowedToInteract) {
+                if(Input.GetKeyDown(KeyCode.F)){
+                    if (timeDial.delayOver && timeDial.dialHasCrystal && timeDial.sisterHasCrystal){
+                        allowedToMove = false;
+                        allowedToInteract = false;
+                        StartCoroutine(InteractDelay());
+                        transform.position = timeDial.teleportDestination.position;
+                    }
+                }
+            }
+        }
+    }
+
+    private IEnumerator InteractDelay(){
+        yield return new WaitForSeconds(1f);
+        allowedToMove = true;
+        allowedToInteract = true;
+    }
+
+
     void Update()
     {
 
@@ -64,9 +88,11 @@ public class Player : MonoBehaviour
         }
 
         if(dialogueUI.IsOpen) return;
-        if(Input.GetKeyDown(KeyCode.F))
-        {
-            Interactable?.Interact(this);
+        if (allowedToInteract) {
+            if(Input.GetKeyDown(KeyCode.F))
+            {
+                Interactable?.Interact(this);
+            }
         }
 
         if (controller.velocity.x == 0f && controller.velocity.z == 0f){

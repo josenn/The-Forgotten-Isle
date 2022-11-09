@@ -26,7 +26,6 @@ public class Item
         switch (itemType) {
             default:
             case ItemType.Crystal:
-                return false;
             case ItemType.Ticket:
                 return true;
             // group all nonstackables and stackables together, with 'return false' and 'return true' under each group

@@ -6,13 +6,21 @@ using UnityEngine;
 public class TimeDialActivator : MonoBehaviour
 {
 
-    bool dialHasCrystal = false;
-    bool delayOver = true;
+    public bool dialHasCrystal = false;
+    public bool delayOver = true;
     Player player;
+    public Transform teleportDestination;
+    public TimeDialActivator sisterTimeDial;
+    public bool sisterHasCrystal = false;
 
     private void Start() {
         GameObject playerObject = GameObject.Find("Player");
         player = playerObject.GetComponent<Player>();
+    }
+
+    private void Update(){
+        sisterHasCrystal = sisterTimeDial.dialHasCrystal;
+        teleportDestination = sisterTimeDial.transform.Find("Teleport point");
     }
 
     private void OnTriggerStay(Collider other)
@@ -20,16 +28,9 @@ public class TimeDialActivator : MonoBehaviour
         if(delayOver){
             if(other.CompareTag("Player"))
             {
-                if(Input.GetKeyDown(KeyCode.F)){
+                if(Input.GetKeyUp(KeyCode.F)){
 
-                    // List<Item> _itemList = new List<Item>();
-                    // _itemList =  player.inventory.GetItemList();
                     
-                     
-                    if (dialHasCrystal){
-                    
-                            StartCoroutine(Activate());   
-                    }
                     if (!dialHasCrystal){
                         int index = player.inventory.itemList.FindIndex(Item => Item.itemType == Item.ItemType.Crystal);
                         if(index >= 0)
@@ -51,11 +52,5 @@ public class TimeDialActivator : MonoBehaviour
         yield return new WaitForSeconds(1f);
         delayOver = true;
     }
-    
-    private IEnumerator Activate()
-    {
-        Debug.Log("Activating Time Dial....");
-        
-        yield return null;
-    }
-}
+
+}   
