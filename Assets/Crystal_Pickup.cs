@@ -2,14 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item_Pickup : MonoBehaviour
+public class Crystal_Pickup : MonoBehaviour
 {
-
-    private Item item;
-
-    public void SetItem(Item item) {
-        this.item = item;
-    }
 
     private void OnTriggerStay(Collider other)
     {

@@ -51,9 +51,10 @@ public class Player : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         playerSprite = GetComponent<SpriteRenderer>();
-        inventory = new Inventory();
+        inventory = new Inventory(); 
         uiInventory.SetInventory(inventory);
     }
+
 
     void Update()
     {
