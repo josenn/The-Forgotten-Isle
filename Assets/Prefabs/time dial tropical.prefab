@@ -124,10 +124,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6452243819539921219}
-  - component: {fileID: 7146161161053580433}
   - component: {fileID: 3164149936789174820}
+  - component: {fileID: 7106025533780695833}
   m_Layer: 0
-  m_Name: time dial
+  m_Name: time dial tropical
   m_TagString: TimeDial
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -152,19 +152,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &7146161161053580433
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5963092724009837561}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.77
-  m_Center: {x: 1.98, y: -1.24, z: 0}
 --- !u!114 &3164149936789174820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,6 +169,19 @@ MonoBehaviour:
   teleportDestination: {fileID: 0}
   sisterTimeDial: {fileID: 0}
   sisterHasCrystal: 0
+--- !u!65 &7106025533780695833
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5963092724009837561}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 2.59, y: -1.05, z: 0}
 --- !u!1 &6164340889362476236
 GameObject:
   m_ObjectHideFlags: 0
