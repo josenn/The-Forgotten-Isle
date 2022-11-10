@@ -1783,6 +1783,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 975864273260968941, guid: 6482f2458ce94a5459d96e92ffe142f7, type: 3}
   m_PrefabInstance: {fileID: 2004266640}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &690268695 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7122224773225449526, guid: 80328753fcf491b4bbbf28adf78e4c1d, type: 3}
+  m_PrefabInstance: {fileID: 856073096}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &715033622 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3164149936789174820, guid: 186cc59fba6acc442a25017501a3f374, type: 3}
@@ -2135,6 +2140,71 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 1826917106, guid: f1200b22f5cb64e47b5a3ab8187e108d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f1200b22f5cb64e47b5a3ab8187e108d, type: 3}
+--- !u!1001 &856073096
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1614778299}
+    m_Modifications:
+    - target: {fileID: 7122224773225449526, guid: 80328753fcf491b4bbbf28adf78e4c1d, type: 3}
+      propertyPath: m_RootOrder
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7122224773225449526, guid: 80328753fcf491b4bbbf28adf78e4c1d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7122224773225449526, guid: 80328753fcf491b4bbbf28adf78e4c1d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7122224773225449526, guid: 80328753fcf491b4bbbf28adf78e4c1d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7122224773225449526, guid: 80328753fcf491b4bbbf28adf78e4c1d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7122224773225449526, guid: 80328753fcf491b4bbbf28adf78e4c1d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -30.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7122224773225449526, guid: 80328753fcf491b4bbbf28adf78e4c1d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7122224773225449526, guid: 80328753fcf491b4bbbf28adf78e4c1d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7122224773225449526, guid: 80328753fcf491b4bbbf28adf78e4c1d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7122224773225449526, guid: 80328753fcf491b4bbbf28adf78e4c1d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7122224773225449526, guid: 80328753fcf491b4bbbf28adf78e4c1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7122224773225449526, guid: 80328753fcf491b4bbbf28adf78e4c1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7122224773225449526, guid: 80328753fcf491b4bbbf28adf78e4c1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7610213788228735628, guid: 80328753fcf491b4bbbf28adf78e4c1d, type: 3}
+      propertyPath: m_Name
+      value: grass cube scalable (6)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 80328753fcf491b4bbbf28adf78e4c1d, type: 3}
 --- !u!4 &883393605 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5765675000118307488, guid: 6ab6f0e969dc3774da13a6b70dfbcbd7, type: 3}
@@ -14833,6 +14903,7 @@ Transform:
   - {fileID: 504510409}
   - {fileID: 1351053771}
   - {fileID: 318611928}
+  - {fileID: 690268695}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
