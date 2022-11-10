@@ -9,6 +9,7 @@ public class DialogueUI : MonoBehaviour
     private TypewriterEffect typewriterEffect;
     private ResponseHandler responseHandler;
     public bool IsOpen { get; private set; }
+    public Player player;
 
     void Start()
     {
@@ -19,6 +20,7 @@ public class DialogueUI : MonoBehaviour
 
     public void ShowDialogue(DialogueObject dialogueObject)
     {
+        player.allowedToMove = false;
         IsOpen = true;
         dialogueBox.SetActive(true);
         StartCoroutine(StepThroughDialogue(dialogueObject));
@@ -52,5 +54,6 @@ public class DialogueUI : MonoBehaviour
         dialogueBox.SetActive(false);
         IsOpen = false;
         textLabel.text = string.Empty;
+        player.allowedToMove = true;
     }
 }

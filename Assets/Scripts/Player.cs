@@ -22,6 +22,11 @@ public class Player : MonoBehaviour
     private float movementX;
     private float movementZ;
     bool isStopped = true;
+    public bool allowedToMove = true;
+    public Inventory inventory;
+    [SerializeField] private UI_Inventory uiInventory;
+    public bool allowedToInteract = true;
+
 
     public DialogueUI DialogueUI => dialogueUI;
 
@@ -42,21 +47,52 @@ public class Player : MonoBehaviour
         return right.normalized;
     }
 
-    // Start is called before the first frame update
+
     void Start()
     {
         controller = GetComponent<CharacterController>();
         playerSprite = GetComponent<SpriteRenderer>();
+        inventory = new Inventory(); 
+        uiInventory.SetInventory(inventory);
     }
+
+
+    void OnTriggerStay (Collider other){
+        if (other.CompareTag("TimeDial")) {
+            TimeDialActivator timeDial = other.gameObject.GetComponent<TimeDialActivator>();
+            if (allowedToInteract) {
+                if(Input.GetKeyDown(KeyCode.F)){
+                    if (timeDial.delayOver && timeDial.dialHasCrystal && timeDial.sisterHasCrystal){
+                        allowedToMove = false;
+                        allowedToInteract = false;
+                        StartCoroutine(InteractDelay());
+                        transform.position = timeDial.teleportDestination.position;
+                    }
+                }
+            }
+        }
+    }
+
+    private IEnumerator InteractDelay(){
+        yield return new WaitForSeconds(1f);
+        allowedToMove = true;
+        allowedToInteract = true;
+    }
+
 
     void Update()
     {
-        PlayerMove();
+
+        if (allowedToMove){
+            PlayerMove();
+        }
 
         if(dialogueUI.IsOpen) return;
-        if(Input.GetKeyDown(KeyCode.F))
-        {
-            Interactable?.Interact(this);
+        if (allowedToInteract) {
+            if(Input.GetKeyDown(KeyCode.F))
+            {
+                Interactable?.Interact(this);
+            }
         }
 
         if (controller.velocity.x == 0f && controller.velocity.z == 0f){
@@ -79,7 +115,7 @@ public class Player : MonoBehaviour
            StartCoroutine(lastMoveSet(movementX, movementZ)); 
         }
 
-        Debug.Log("X: " + movementX + ". Z: " + movementZ + ".");
+        //Debug.Log("X: " + movementX + ". Z: " + movementZ + ".");
     }
 
     void PlayerMove()
