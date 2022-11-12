@@ -13,4 +13,5 @@ public class ItemAssets : MonoBehaviour
 
     public Sprite crystalSprite;
     public Sprite ticketSprite;
+    public Sprite coconutSprite;
 }
