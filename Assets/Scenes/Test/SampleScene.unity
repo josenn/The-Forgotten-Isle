@@ -8895,6 +8895,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 121042704265028929, guid: 5ae5106cf5f932f4a9b55b1cb73c925d, type: 3}
+      propertyPath: typewriterSpeed
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 121042704265028934, guid: 5ae5106cf5f932f4a9b55b1cb73c925d, type: 3}
       propertyPath: m_Pivot.x
       value: 0
