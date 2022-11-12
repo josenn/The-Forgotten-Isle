@@ -12,6 +12,7 @@ public class TimeDialActivator : MonoBehaviour
     public Transform teleportDestination;
     public TimeDialActivator sisterTimeDial;
     public bool sisterHasCrystal = false;
+    
 
     private void Start() {
         GameObject playerObject = GameObject.Find("Player");

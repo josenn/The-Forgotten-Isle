@@ -28,6 +28,7 @@ public class Player : MonoBehaviour
     public bool allowedToInteract = true;
     private Animator fadeAnim;
     private TimeDialActivator _timeDial;
+    public Animator sunAnim;
 
     public DialogueUI DialogueUI => dialogueUI;
 
@@ -68,7 +69,7 @@ public class Player : MonoBehaviour
                         allowedToMove = false;
                         allowedToInteract = false;
                         _timeDial = timeDial;
-                        StartCoroutine(InteractDelay());
+                        StartCoroutine(TimeDialEffects());
                     }
                 }
             }
@@ -77,7 +78,9 @@ public class Player : MonoBehaviour
 
     
 
-    private IEnumerator InteractDelay(){
+    private IEnumerator TimeDialEffects(){
+        sunAnim.SetTrigger("SpinSun");
+        yield return new WaitForSeconds(1f);
         fadeAnim.SetTrigger("FadeOut");
         yield return new WaitForSeconds(2f);
         transform.position = _timeDial.teleportDestination.position;
