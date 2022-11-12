@@ -7,6 +7,7 @@ public class Item
     public enum ItemType {
         Crystal,
         Ticket,
+        Coconut,
         // add new item names here
     }
 
@@ -18,6 +19,7 @@ public class Item
             default:
             case ItemType.Crystal: return ItemAssets.Instance.crystalSprite;
             case ItemType.Ticket: return ItemAssets.Instance.ticketSprite;
+            case ItemType.Coconut: return ItemAssets.Instance.coconutSprite;
             //create new case here for sprite retrieval, also add public sprite to ItemAssets
             
         }
@@ -27,6 +29,7 @@ public class Item
             default:
             case ItemType.Crystal:
             case ItemType.Ticket:
+            case ItemType.Coconut:
                 return true;
             // group all nonstackables and stackables together, with 'return false' and 'return true' under each group
         }
