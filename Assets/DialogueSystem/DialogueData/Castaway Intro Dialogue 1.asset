@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b6b3bec5968a4c54591c43182325f7cc, type: 3}
-  m_Name: Castaway Intro Dialogue
+  m_Name: Castaway Intro Dialogue 1
   m_EditorClassIdentifier: 
   dialogue:
   - Oh, Hello! Where did you come from?

@@ -91,6 +91,9 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        if (Interactable != null){
+            Debug.Log(Interactable.ToString());
+        }
 
         if (allowedToMove){
             PlayerMove();

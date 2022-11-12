@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6b3bec5968a4c54591c43182325f7cc, type: 3}
+  m_Name: Castaway Success Dialogue 1
+  m_EditorClassIdentifier: 
+  dialogue:
+  - Aye lad, that'll hit the spot! Thanks for gathering the coconuts for me.
+  - As promised, here's that shiny bauble for ya.
+  - "If you head south east there is a Captain with a ship there.  He\u2019s a bit
+    rude and arrogant if you ask me.\r\n"
+  - 'But he could take you across the water if that''s where yer headed.
+
+'
+  responses: []
