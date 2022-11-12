@@ -26,7 +26,8 @@ public class Player : MonoBehaviour
     public Inventory inventory;
     [SerializeField] private UI_Inventory uiInventory;
     public bool allowedToInteract = true;
-
+    private Animator fadeAnim;
+    private TimeDialActivator _timeDial;
 
     public DialogueUI DialogueUI => dialogueUI;
 
@@ -52,6 +53,7 @@ public class Player : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         playerSprite = GetComponent<SpriteRenderer>();
+        fadeAnim = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
         inventory = new Inventory(); 
         uiInventory.SetInventory(inventory);
     }
@@ -65,15 +67,22 @@ public class Player : MonoBehaviour
                     if (timeDial.delayOver && timeDial.dialHasCrystal && timeDial.sisterHasCrystal){
                         allowedToMove = false;
                         allowedToInteract = false;
+                        _timeDial = timeDial;
                         StartCoroutine(InteractDelay());
-                        transform.position = timeDial.teleportDestination.position;
                     }
                 }
             }
         }
     }
 
+    
+
     private IEnumerator InteractDelay(){
+        fadeAnim.SetTrigger("FadeOut");
+        yield return new WaitForSeconds(2f);
+        transform.position = _timeDial.teleportDestination.position;
+        yield return new WaitForSeconds(1f);
+        fadeAnim.SetTrigger("FadeIn");
         yield return new WaitForSeconds(1f);
         allowedToMove = true;
         allowedToInteract = true;

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1165437570}
   - component: {fileID: 1165437572}
   - component: {fileID: 1165437573}
+  - component: {fileID: 300009798}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1165437569}
   m_LocalRotation: {x: 0.20440894, y: -0.37319937, z: 0.08466896, w: 0.900983}
-  m_LocalPosition: {x: 0, y: -0.01, z: 0}
+  m_LocalPosition: {x: 0, y: 0.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -97,6 +98,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 180b373e4be9d1b49a6ff0df2c16c98f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &300009798
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165437569}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4da0b6fff820d594e8740f5de9e36adf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3524404216153152301
 GameObject:
   m_ObjectHideFlags: 0
@@ -108,7 +129,6 @@ GameObject:
   - component: {fileID: 533392199706225752}
   - component: {fileID: 3123333623564308349}
   - component: {fileID: 1021858948}
-  - component: {fileID: 1826917106}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -144,11 +164,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4374ea69ef3d89e43858a8d480fcb2e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 2
+  playerSpeed: 7.2
   playerCamera: {fileID: 0}
   dialogueUI: {fileID: 0}
-  spriteAnimator: {fileID: 0}
-  idleSetDelay: 0.09
+  spriteAnimator: {fileID: 300009798}
+  idleSetDelay: 20
   allowedToMove: 1
   uiInventory: {fileID: 0}
   allowedToInteract: 1
@@ -170,19 +190,3 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &1826917106
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3524404216153152301}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
