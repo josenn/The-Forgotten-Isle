@@ -125,7 +125,7 @@ Transform:
   m_GameObject: {fileID: 3524404216153152301}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1165437570}
@@ -147,6 +147,11 @@ MonoBehaviour:
   playerSpeed: 2
   playerCamera: {fileID: 0}
   dialogueUI: {fileID: 0}
+  spriteAnimator: {fileID: 0}
+  idleSetDelay: 0.09
+  allowedToMove: 1
+  uiInventory: {fileID: 0}
+  allowedToInteract: 1
 --- !u!143 &1021858948
 CharacterController:
   m_ObjectHideFlags: 0
