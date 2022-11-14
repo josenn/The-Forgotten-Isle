@@ -10,7 +10,7 @@ public class Music_switcher : MonoBehaviour
 
     void Start()
     {
-        audio = GetComponent<AudioSource>();
+        audio = this.GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter(Collider other) {
