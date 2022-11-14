@@ -95,6 +95,10 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape)){
+            Application.Quit();
+        }
+
         if (Interactable != null){
             Debug.Log(Interactable.ToString());
         }
