@@ -36,7 +36,7 @@ public class TimeDialActivator : MonoBehaviour
         if(delayOver){
             if(other.CompareTag("Player"))
             {
-                if(Input.GetKeyUp(KeyCode.F)){
+                if(Input.GetKeyDown(KeyCode.F)){
 
                     
                     if (!dialHasCrystal){
