@@ -32,7 +32,7 @@ public class Castaway_Coconut_Request : MonoBehaviour, IInteractable
     {
         if (!gotTheCoconuts){
             GetItem(player);
-            if (item != null && item.amount == 3){
+            if (item != null && item.amount >= 3){
                 player.DialogueUI.ShowDialogue(successDialogue);
                 player.inventory.RemoveItem(new Item { itemType = Item.ItemType.Coconut, amount = 3});
                 player.inventory.AddItem(new Item { itemType = Item.ItemType.Crystal, amount = 1});
