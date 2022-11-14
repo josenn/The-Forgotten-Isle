@@ -165,6 +165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 7.2
+  jumpHeight: 0.4
   playerCamera: {fileID: 0}
   dialogueUI: {fileID: 0}
   spriteAnimator: {fileID: 300009798}
@@ -172,6 +173,7 @@ MonoBehaviour:
   allowedToMove: 1
   uiInventory: {fileID: 0}
   allowedToInteract: 1
+  sunAnim: {fileID: 0}
 --- !u!143 &1021858948
 CharacterController:
   m_ObjectHideFlags: 0

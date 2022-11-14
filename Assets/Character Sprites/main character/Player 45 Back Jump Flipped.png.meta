@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3d88bcb425a1b56448d2ee1629638034
+guid: c2d7137fe046ddf49b22795d7fa4c4f3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player Side Jump Anim_0
+      name: Player 45 Back Jump Flipped_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,14 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33c4bbfa4ddab524c834a374143705c0
-      internalID: -1933186002
+      spriteID: b8860563d1ad8e142adbb0e19f8facb2
+      internalID: 949388497
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player Side Jump Anim_1
+      name: Player 45 Back Jump Flipped_1
       rect:
         serializedVersion: 2
         x: 32
@@ -152,14 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d31d481c1271df34b8d9ab3cdc8edf9c
-      internalID: 1958974458
+      spriteID: 4c53962f00d27f34fb20cf5e8edf9e97
+      internalID: 398507383
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player Side Jump Anim_2
+      name: Player 45 Back Jump Flipped_2
       rect:
         serializedVersion: 2
         x: 64
@@ -173,14 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18ac543fafd44544a9b4b6ca6a8d00c9
-      internalID: -1368840837
+      spriteID: e2e72c23f2c1e3d47812d3d1495a0727
+      internalID: 34692142
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player Side Jump Anim_3
+      name: Player 45 Back Jump Flipped_3
       rect:
         serializedVersion: 2
         x: 96
@@ -194,8 +194,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d95908e8647a1154784d0c8a983bd16c
-      internalID: -476270803
+      spriteID: 1ae9de63d4ed3544db2a1f74231cca55
+      internalID: 661830027
       vertices: []
       indices: 
       edges: []
@@ -203,7 +203,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 04f93923508b4ee40b2f2c1739f09ca6
+    spriteID: c516aafc8be1bdf4c9474d29c8aebb1a
     internalID: 0
     vertices: []
     indices: 
@@ -211,10 +211,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Player Side Jump Anim_1: 1958974458
-      Player Side Jump Anim_3: -476270803
-      Player Side Jump Anim_2: -1368840837
-      Player Side Jump Anim_0: -1933186002
+      Player 45 Back Jump Flipped_3: 661830027
+      Player 45 Back Jump Flipped_2: 34692142
+      Player 45 Back Jump Flipped_1: 398507383
+      Player 45 Back Jump Flipped_0: 949388497
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

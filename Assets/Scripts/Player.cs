@@ -9,8 +9,8 @@ public class Player : MonoBehaviour
     private SpriteRenderer playerSprite;
     private Vector3 inputVector = Vector3.zero;
     private Vector3 playerVelocity = Vector3.zero;
-    [SerializeField] float playerSpeed = 1.0f;
-    private float jumpHeight = 1.0f;
+    [SerializeField] private float playerSpeed = 1.0f;
+    [SerializeField] private float jumpHeight = 1.0f;
     private float gravityValue = -9.81f;
     public Camera playerCamera;
     [SerializeField] DialogueUI dialogueUI;
@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
     private float movementX;
     private float movementZ;
     bool isStopped = true;
+    private bool isJumping = false;
     public bool allowedToMove = true;
     public Inventory inventory;
     [SerializeField] private UI_Inventory uiInventory;
@@ -102,6 +103,11 @@ public class Player : MonoBehaviour
             PlayerMove();
         }
 
+        if (controller.isGrounded)
+        {
+            isJumping = false;
+        }
+
         if(dialogueUI.IsOpen) return;
         if (allowedToInteract) {
             if(Input.GetKeyDown(KeyCode.F))
@@ -122,11 +128,14 @@ public class Player : MonoBehaviour
         spriteAnimator.SetFloat("LastMoveVertical", lastMoveV);
         
         spriteAnimator.SetBool("isWalking", isWalking);
+        spriteAnimator.SetBool("isJumping", isJumping);
+
         //Set the parameters of the animator's blend tree to our inputs along with camera influence
         spriteAnimator.SetFloat("Horizontal", movementX);
         spriteAnimator.SetFloat("Vertical", movementZ);
+        
         //start coroutine to get delayed movement data for setting direction of idle state
-        if(isWalking){
+        if (isWalking){
            StartCoroutine(lastMoveSet(movementX, movementZ)); 
         }
 
@@ -181,8 +190,9 @@ public class Player : MonoBehaviour
         if (Input.GetButtonDown("Jump") && controller.isGrounded)
         {
             playerVelocity.y += Mathf.Sqrt(jumpHeight * -2.0f * gravityValue);
+            isJumping = true;
         }
-
+        
         playerVelocity.y += gravityValue * Time.deltaTime;
     }
 
