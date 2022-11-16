@@ -7,6 +7,8 @@ public class Rotate_Camera_Control : MonoBehaviour
     bool isTurning = false;
     public float lerpTime = 1.5f;
     float velocity;
+    public float turnOnE = -90f;
+    public float turnOnQ = 90f;
 
     // Start is called before the first frame update
     void Start()
@@ -19,10 +21,10 @@ public class Rotate_Camera_Control : MonoBehaviour
     {
         if (!isTurning){
             if (Input.GetKeyDown(KeyCode.Q)){
-                StartCoroutine(RotateCamera(90f));
+                StartCoroutine(RotateCamera(turnOnQ));
             }
             if (Input.GetKeyDown(KeyCode.E)){
-                StartCoroutine(RotateCamera(-90f));
+                StartCoroutine(RotateCamera(turnOnE));
             }
         }
 
