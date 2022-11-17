@@ -30,6 +30,7 @@ public class Player : MonoBehaviour
     private Animator fadeAnim;
     private TimeDialActivator _timeDial;
     public Animator sunAnim;
+    private Respawn_Handler _respawnHandler;
 
     public DialogueUI DialogueUI => dialogueUI;
 
@@ -58,6 +59,7 @@ public class Player : MonoBehaviour
         fadeAnim = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
         inventory = new Inventory(); 
         uiInventory.SetInventory(inventory);
+        _respawnHandler = GameObject.Find("Respawn Handler").GetComponent<Respawn_Handler>();
     }
 
 
@@ -75,6 +77,22 @@ public class Player : MonoBehaviour
                 }
             }
         }
+    }
+    private void OnTriggerEnter(Collider other) {
+        if (other.gameObject.CompareTag("RespawnOnContact")){
+            
+            StartCoroutine(RespawnPlayer());
+            Debug.Log("player respawned by " + other.name);
+        }
+    }
+    private IEnumerator RespawnPlayer(){
+        allowedToMove = false;
+        allowedToInteract = false;
+        yield return new WaitForSeconds(0.01f);
+        transform.position = _respawnHandler.currentRespawn.position;
+        yield return new WaitForSeconds(0.1f);
+        allowedToMove = true;
+        allowedToInteract = true;
     }
 
     
