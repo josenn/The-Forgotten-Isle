@@ -69,7 +69,7 @@ Material:
     - _ZWrite: 0
     - _ZWriteControl: 0
     - _metallic: 0.1
-    - _rippledensity: 4
+    - _rippledensity: 6
     - _ripplespeed: 1
     - _slimness: 10
     - _smoothness: 0.2
