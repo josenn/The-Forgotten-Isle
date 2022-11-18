@@ -1,5 +1,5 @@
 {
-    "m_SGVersion": 2,
+    "m_SGVersion": 3,
     "m_Type": "UnityEditor.ShaderGraph.GraphData",
     "m_ObjectId": "edf487da1e3c41f6a0bcd67722fb852e",
     "m_Properties": [
@@ -89,6 +89,12 @@
         }
     ],
     "m_Keywords": [],
+    "m_Dropdowns": [],
+    "m_CategoryData": [
+        {
+            "m_Id": "3d47b7649b5841228ec7064c1a9ff398"
+        }
+    ],
     "m_Nodes": [
         {
             "m_Id": "5d800153de7544198fbbacad4fa7e3b2"
@@ -1850,10 +1856,11 @@
         "serializedMesh": {
             "m_SerializedMesh": "{\"mesh\":{\"instanceID\":0}}",
             "m_Guid": ""
-        }
+        },
+        "preventRotation": false
     },
     "m_Path": "Shader Graphs",
-    "m_ConcretePrecision": 0,
+    "m_GraphPrecision": 0,
     "m_PreviewMode": 2,
     "m_OutputNode": {
         "m_Id": ""
@@ -2195,9 +2202,13 @@
         "m_GuidSerialized": "3fd682c8-9dc7-4804-8b0e-3bd03b9d8f80"
     },
     "m_Name": "Normal tiles 2",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Vector1_05fd8b9a952e4175801063da8cdd3226",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -2338,7 +2349,8 @@
     "m_CustomColors": {
         "m_SerializableColors": []
     },
-    "m_Space": 2
+    "m_Space": 2,
+    "m_PositionSource": 0
 }
 
 {
@@ -2735,10 +2747,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 460.0,
-            "y": 397.6000061035156,
+            "x": 448.0,
+            "y": 411.20001220703127,
             "width": 208.0,
-            "height": 301.6000061035156
+            "height": 301.5999755859375
         }
     },
     "m_Slots": [
@@ -3384,9 +3396,13 @@
         "m_GuidSerialized": "cbcbabab-e8e2-40b1-af18-b94954b75ece"
     },
     "m_Name": "Refract Strength",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Vector1_1eb090bc291c434e95cc977a68d3da6b",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -5060,6 +5076,99 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.CategoryData",
+    "m_ObjectId": "3d47b7649b5841228ec7064c1a9ff398",
+    "m_Name": "",
+    "m_ChildObjectList": [
+        {
+            "m_Id": "5f6551fbe6004a959f62a5a28e381258"
+        },
+        {
+            "m_Id": "9ce239c24ae34d9c93ceabeb6ccaaa10"
+        },
+        {
+            "m_Id": "de3b60ada82f4d3091566ebbcace6eac"
+        },
+        {
+            "m_Id": "afd4be760dce41ed97dff477c1b5634f"
+        },
+        {
+            "m_Id": "05fd8b9a952e4175801063da8cdd3226"
+        },
+        {
+            "m_Id": "cf8acb2ac9ac4b28b6131353abf97d6c"
+        },
+        {
+            "m_Id": "defa1dc475f0490c93041010aae3369c"
+        },
+        {
+            "m_Id": "476dfbc9130c46958505dd46bf6dd9bf"
+        },
+        {
+            "m_Id": "b3331e5e8a0641548f2a11adc49183b2"
+        },
+        {
+            "m_Id": "c99783880db144a09dc311304b51c257"
+        },
+        {
+            "m_Id": "db216430b3a944a4aa19f13b7bade602"
+        },
+        {
+            "m_Id": "4a6e731c657749a6b945dfe0ef8d2e0e"
+        },
+        {
+            "m_Id": "5d9477bbd749495fbac201c2dfefa448"
+        },
+        {
+            "m_Id": "62428ddf87a64d5aa15e2fd8cfae6788"
+        },
+        {
+            "m_Id": "b8975300339c440d8dbc9ef1bedd0768"
+        },
+        {
+            "m_Id": "b074b21a62464145b011225c66d2e410"
+        },
+        {
+            "m_Id": "840741921de2421eb54eb9cfe4208d6e"
+        },
+        {
+            "m_Id": "d395d269bee343d5a108297b6e35e7b5"
+        },
+        {
+            "m_Id": "abe5cf9c093244fabda9f91f15c45b28"
+        },
+        {
+            "m_Id": "e772b4e3ee044069aee09a9a5f406af4"
+        },
+        {
+            "m_Id": "ab64691e6a8740e8957871e9372b75d2"
+        },
+        {
+            "m_Id": "cf00772d466b4d64a66968a285aca1d8"
+        },
+        {
+            "m_Id": "9aa46f3b0f674e63b818c0b224dd3160"
+        },
+        {
+            "m_Id": "c7a452fd3b0e4d24b0d95b3108e45ac2"
+        },
+        {
+            "m_Id": "1eb090bc291c434e95cc977a68d3da6b"
+        },
+        {
+            "m_Id": "66e096fe3a1e413290195fae03d99c4d"
+        },
+        {
+            "m_Id": "8565233f99424d0381623f4bda589181"
+        },
+        {
+            "m_Id": "4227d5f953e44d16b6cc94142d1208da"
+        }
+    ]
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "3e8152733b864a55b276ef84ef9000b1",
     "m_Id": 5,
@@ -5140,9 +5249,13 @@
         "m_GuidSerialized": "b296a360-09da-477b-ad64-9678b82541ef"
     },
     "m_Name": "transparency",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Vector1_4227d5f953e44d16b6cc94142d1208da",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -5240,9 +5353,13 @@
         "m_GuidSerialized": "930b9488-2ecf-4e2f-bd21-a3ad630e088f"
     },
     "m_Name": "Wave 1 normal direction",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Vector2_476dfbc9130c46958505dd46bf6dd9bf",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -5287,9 +5404,13 @@
         "m_GuidSerialized": "f49acd4c-2cf1-47f7-9f96-e9488eed79bc"
     },
     "m_Name": "3d Wave Tile",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Vector1_4a6e731c657749a6b945dfe0ef8d2e0e",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -6155,9 +6276,13 @@
         "m_GuidSerialized": "5b038727-f237-4fd8-82f0-7a57d3d62852"
     },
     "m_Name": "3d Wave Scale",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Vector1_5d9477bbd749495fbac201c2dfefa448",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -6193,9 +6318,13 @@
         "m_GuidSerialized": "886da051-8f1a-4f32-ad5b-401215f4a8e9"
     },
     "m_Name": "Water B",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Color_5f6551fbe6004a959f62a5a28e381258",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -6206,6 +6335,7 @@
         "b": 0.0,
         "a": 0.0
     },
+    "isMainColor": false,
     "m_ColorMode": 0
 }
 
@@ -6265,9 +6395,13 @@
         "m_GuidSerialized": "c1dbae03-a932-42b6-84fc-94a0228d822a"
     },
     "m_Name": "3d Wave Stretch",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Vector2_62428ddf87a64d5aa15e2fd8cfae6788",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -6359,9 +6493,13 @@
         "m_GuidSerialized": "8ac28f2c-9d87-4057-b222-4efc489181fd"
     },
     "m_Name": "Refraction strength",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Vector1_66e096fe3a1e413290195fae03d99c4d",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -6660,7 +6798,8 @@
         "m_SerializableColors": []
     },
     "m_TextureType": 0,
-    "m_NormalMapSpace": 0
+    "m_NormalMapSpace": 0,
+    "m_EnableGlobalMipBias": true
 }
 
 {
@@ -7230,9 +7369,13 @@
         "m_GuidSerialized": "13c04ea5-d944-4cd5-91af-caf8120f0fb1"
     },
     "m_Name": "3d wave strength",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Vector1_840741921de2421eb54eb9cfe4208d6e",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -7325,9 +7468,13 @@
         "m_GuidSerialized": "3326730e-41c9-4ddf-a116-d6cb24e71a92"
     },
     "m_Name": "metallic",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Vector1_8565233f99424d0381623f4bda589181",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -7940,9 +8087,13 @@
         "m_GuidSerialized": "0204e128-f65f-4651-94f8-dfc019d3b380"
     },
     "m_Name": "Depth",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Vector1_9aa46f3b0f674e63b818c0b224dd3160",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -8007,7 +8158,8 @@
         "m_SerializableColors": []
     },
     "m_TextureType": 1,
-    "m_NormalMapSpace": 0
+    "m_NormalMapSpace": 0,
+    "m_EnableGlobalMipBias": true
 }
 
 {
@@ -8118,9 +8270,13 @@
         "m_GuidSerialized": "ccf2b651-f170-44c0-99f9-cad5b4def10c"
     },
     "m_Name": "Water A",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Color_9ce239c24ae34d9c93ceabeb6ccaaa10",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -8131,6 +8287,7 @@
         "b": 0.0,
         "a": 0.0
     },
+    "isMainColor": false,
     "m_ColorMode": 0
 }
 
@@ -8574,7 +8731,8 @@
         "m_SerializableColors": []
     },
     "m_TextureType": 1,
-    "m_NormalMapSpace": 0
+    "m_NormalMapSpace": 0,
+    "m_EnableGlobalMipBias": true
 }
 
 {
@@ -8731,9 +8889,13 @@
         "m_GuidSerialized": "6e1ec238-7efb-448d-b82f-1124790981d1"
     },
     "m_Name": "Foam tiling",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Vector1_ab64691e6a8740e8957871e9372b75d2",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -8754,9 +8916,13 @@
         "m_GuidSerialized": "3ccc9d99-bd3f-4dcd-80df-1fd8906ca589"
     },
     "m_Name": "foam strength",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Vector1_abe5cf9c093244fabda9f91f15c45b28",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -8913,9 +9079,13 @@
         "m_GuidSerialized": "ae63a116-b9a6-4e0c-9b85-2865dafbad5c"
     },
     "m_Name": "Normal Tiles 1",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Vector1_afd4be760dce41ed97dff477c1b5634f",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -8969,9 +9139,13 @@
         "m_GuidSerialized": "bd76f110-65f2-44d1-a840-1e4ba37fa0a5"
     },
     "m_Name": "3d wave speed",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Vector1_b074b21a62464145b011225c66d2e410",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -9013,9 +9187,13 @@
         "m_GuidSerialized": "a51a2613-4ae3-4e0a-9681-f5de4428c40b"
     },
     "m_Name": "Wave 2 normal direction",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "",
     "m_OverrideReferenceName": "Vector2_1",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -9218,9 +9396,13 @@
         "m_GuidSerialized": "4be80ff4-b2aa-44b1-bd09-85971cce9704"
     },
     "m_Name": "3d Wave Direction",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Vector2_b8975300339c440d8dbc9ef1bedd0768",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -9565,7 +9747,8 @@
     "m_CustomColors": {
         "m_SerializableColors": []
     },
-    "m_Space": 0
+    "m_Space": 0,
+    "m_PositionSource": 0
 }
 
 {
@@ -10044,9 +10227,13 @@
         "m_GuidSerialized": "1e776c1f-2b2d-45c8-821b-1136f7e58e49"
     },
     "m_Name": "Depth Color",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Color_c7a452fd3b0e4d24b0d95b3108e45ac2",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -10057,6 +10244,7 @@
         "b": 0.0,
         "a": 0.0
     },
+    "isMainColor": false,
     "m_ColorMode": 0
 }
 
@@ -10182,9 +10370,13 @@
         "m_GuidSerialized": "cd9e8de1-67ae-4e97-89dc-4bf0d0d4c33e"
     },
     "m_Name": "Wave 1 normal speed",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Vector1_c99783880db144a09dc311304b51c257",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -10198,17 +10390,23 @@
 }
 
 {
-    "m_SGVersion": 0,
+    "m_SGVersion": 1,
     "m_Type": "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
     "m_ObjectId": "c9df339c77ac42879f47fc87c258dd82",
     "m_ActiveSubTarget": {
         "m_Id": "3c5b92d8e0374846a9544af049fb3177"
     },
+    "m_AllowMaterialOverride": false,
     "m_SurfaceType": 1,
+    "m_ZTestMode": 4,
+    "m_ZWriteControl": 0,
     "m_AlphaMode": 0,
-    "m_TwoSided": false,
+    "m_RenderFace": 2,
     "m_AlphaClip": false,
-    "m_CustomEditorGUI": ""
+    "m_CastShadows": true,
+    "m_ReceiveShadows": true,
+    "m_CustomEditorGUI": "",
+    "m_SupportVFX": false
 }
 
 {
@@ -10394,9 +10592,13 @@
         "m_GuidSerialized": "d03d0ba7-806a-462f-9784-939c1a3a99fa"
     },
     "m_Name": "Foam direction",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Vector2_cf00772d466b4d64a66968a285aca1d8",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -10438,9 +10640,13 @@
         "m_GuidSerialized": "4b394447-a1aa-41c9-916c-6b5e054371a6"
     },
     "m_Name": "Normal Strength",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Vector1_cf8acb2ac9ac4b28b6131353abf97d6c",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -10620,9 +10826,13 @@
         "m_GuidSerialized": "58e2245f-6044-4bcd-b5be-bcafb9441774"
     },
     "m_Name": "foam distance",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Vector1_d395d269bee343d5a108297b6e35e7b5",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -10995,9 +11205,13 @@
         "m_GuidSerialized": "92578a8c-a0fc-4ae0-98df-1fe8849630f4"
     },
     "m_Name": "Wave 2 normal speed",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "",
     "m_OverrideReferenceName": "Vector1_c99783880db144a09dc311304b51c257_1",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -11286,9 +11500,13 @@
         "m_GuidSerialized": "fd44d371-d9a2-4f44-885d-ee78fcd67975"
     },
     "m_Name": "Normal Map",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Texture2D_de3b60ada82f4d3091566ebbcace6eac",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -11297,6 +11515,8 @@
         "m_SerializedTexture": "{\"texture\":{\"instanceID\":0}}",
         "m_Guid": ""
     },
+    "isMainTexture": false,
+    "useTilingAndOffset": false,
     "m_Modifiable": true,
     "m_DefaultType": 0
 }
@@ -11309,9 +11529,13 @@
         "m_GuidSerialized": "aadca2c4-b0e3-4601-9a96-d18777932dc6"
     },
     "m_Name": "smoothness",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Vector1_defa1dc475f0490c93041010aae3369c",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -11925,9 +12149,13 @@
         "m_GuidSerialized": "572d329a-21e9-4066-b9d3-fead6904c640"
     },
     "m_Name": "Foam texture",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Texture2D_e772b4e3ee044069aee09a9a5f406af4",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -11936,6 +12164,8 @@
         "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"4e51e6d0b3999e649923d4960e058976\",\"type\":3}}",
         "m_Guid": ""
     },
+    "isMainTexture": false,
+    "useTilingAndOffset": false,
     "m_Modifiable": true,
     "m_DefaultType": 0
 }
