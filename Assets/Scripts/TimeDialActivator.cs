@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TimeDialActivator : MonoBehaviour
+public class TimeDialActivator : MonoBehaviour, IInteractable
 {
 
     public bool dialHasCrystal = false;
@@ -15,6 +15,9 @@ public class TimeDialActivator : MonoBehaviour
     Transform crystal;
     Animator crystalAnim;
     Animator sisterCrystalAnim;
+    [SerializeField] DialogueObject _noCrystalInInventory;
+    [SerializeField] DialogueObject _otherDialNoCrystal;
+    private Item item = null;
     
 
     private void Start() {
@@ -66,4 +69,44 @@ public class TimeDialActivator : MonoBehaviour
         delayOver = true;
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Player") && other.TryGetComponent(out Player player))
+        {
+            player.Interactable = this;
+        }
+    }
+    void OnTriggerExit(Collider other)
+    {
+        if(other.CompareTag("Player") && other.TryGetComponent(out Player player))
+        {
+            if(player.Interactable is TimeDialActivator ccr && ccr == this)
+            {
+                player.Interactable = null;
+            }
+        }
+    }
+     public void Interact(Player player){
+        GetItem(player);
+        if (!dialHasCrystal) {
+            if (item == null){
+                player.DialogueUI.ShowDialogue(_noCrystalInInventory);
+            }
+        }
+        if (dialHasCrystal && !sisterHasCrystal) {
+            player.DialogueUI.ShowDialogue(_otherDialNoCrystal);
+        }
+        
+
+    }
+
+     
+     private void GetItem(Player player) {
+            foreach (Item _item in player.inventory.itemList){
+                if (_item.itemType == Item.ItemType.Crystal){
+                    item = _item;
+                }
+            }
+        }
+    
 }   
