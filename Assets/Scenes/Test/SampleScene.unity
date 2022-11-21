@@ -5428,6 +5428,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1165437572, guid: f1200b22f5cb64e47b5a3ab8187e108d, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1165437572, guid: f1200b22f5cb64e47b5a3ab8187e108d, type: 3}
       propertyPath: m_RenderingLayerMask
       value: 1
       objectReference: {fileID: 0}

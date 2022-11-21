@@ -158,6 +158,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Player 45 Front Idle right_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62ed7a9ad82e1484cb67cb495f1baf32
+      internalID: 158584202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player 45 Front Idle right_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bed33985c5aafe45b28f6616dea3064
+      internalID: -1777445534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -170,6 +212,8 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Player 45 Front Idle right_0: -606773422
+      Player 45 Front Idle right_2: 158584202
+      Player 45 Front Idle right_3: -1777445534
       Player 45 Front Idle right_1: -812528824
   spritePackingTag: 
   pSDRemoveMatte: 0
