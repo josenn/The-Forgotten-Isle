@@ -117,9 +117,9 @@ public class Player : MonoBehaviour
             Application.Quit();
         }
 
-        if (Interactable != null){
-            Debug.Log(Interactable.ToString());
-        }
+        // if (Interactable != null){
+        //     Debug.Log(Interactable.ToString());
+        // }
 
         if (allowedToMove){
             PlayerMove();
