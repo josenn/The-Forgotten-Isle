@@ -57,7 +57,7 @@ Material:
     - _DepthDistance: 1
     - _Depth_Compare_Distance: 0.89
     - _DstBlend: 10
-    - _Pixelation: 50000
+    - _Pixelation: 30000
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
