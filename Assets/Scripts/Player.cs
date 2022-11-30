@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    //private Rigidbody rb;
     private CharacterController controller;
     private SpriteRenderer playerSprite;
     private Vector3 inputVector = Vector3.zero;
@@ -23,6 +22,7 @@ public class Player : MonoBehaviour
     private float movementZ;
     bool isStopped = true;
     private bool isJumping = false;
+    private bool hasLanded = true;
     public bool allowedToMove = true;
     public Inventory inventory;
     [SerializeField] private UI_Inventory uiInventory;
@@ -31,6 +31,10 @@ public class Player : MonoBehaviour
     private TimeDialActivator _timeDial;
     public Animator sunAnim;
     private Respawn_Handler _respawnHandler;
+
+    public AudioClip jumpSFX, landSFX, worldChangeSFX;
+    public AudioClip[] grassStep, snowStep;
+    private AudioSource source;
 
     public DialogueUI DialogueUI => dialogueUI;
 
@@ -56,6 +60,7 @@ public class Player : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         playerSprite = GetComponent<SpriteRenderer>();
+        source = GetComponent<AudioSource>();
         fadeAnim = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
         inventory = new Inventory(); 
         uiInventory.SetInventory(inventory);
@@ -72,6 +77,8 @@ public class Player : MonoBehaviour
                         allowedToMove = false;
                         allowedToInteract = false;
                         _timeDial = timeDial;
+                        source.clip = worldChangeSFX;
+                        source.PlayOneShot(source.clip);
                         StartCoroutine(TimeDialEffects());
                     }
                 }
@@ -128,6 +135,12 @@ public class Player : MonoBehaviour
         if (controller.isGrounded)
         {
             isJumping = false;
+            if (hasLanded == true)
+            {
+                source.clip = landSFX;
+                source.PlayOneShot(source.clip);
+                hasLanded = false;
+            }
         }
 
         if(dialogueUI.IsOpen) return;
@@ -213,6 +226,10 @@ public class Player : MonoBehaviour
         {
             playerVelocity.y += Mathf.Sqrt(jumpHeight * -2.0f * gravityValue);
             isJumping = true;
+
+            source.clip = jumpSFX;
+            source.PlayOneShot(source.clip);
+            hasLanded = true;
         }
         
         playerVelocity.y += gravityValue * Time.deltaTime;
@@ -226,5 +243,11 @@ public class Player : MonoBehaviour
 
         yield return null;
 
+    }
+
+    public void PlayPickup(AudioClip sfx)
+    {
+        source.clip = sfx;
+        source.PlayOneShot(source.clip);
     }
 }
