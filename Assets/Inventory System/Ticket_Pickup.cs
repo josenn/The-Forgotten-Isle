@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Ticket_Pickup : MonoBehaviour
 {
+    public AudioClip pickupSFX;
+
     private void OnTriggerEnter(Collider other)
     {
         
@@ -12,6 +14,7 @@ public class Ticket_Pickup : MonoBehaviour
                 
                     Player player = GameObject.Find("Player").GetComponent<Player>();
                     player.inventory.AddItem(new Item { itemType = Item.ItemType.Ticket, amount = 1});
+                    player.PlayPickup(pickupSFX);
                     this.gameObject.SetActive(false);
                 
             }

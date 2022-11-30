@@ -18,10 +18,13 @@ public class TimeDialActivator : MonoBehaviour, IInteractable
     [SerializeField] DialogueObject _noCrystalInInventory;
     [SerializeField] DialogueObject _otherDialNoCrystal;
     private Item item = null;
-    
+
+    public AudioClip activateSFX;
+    private AudioSource source;
 
     private void Start() {
         GameObject playerObject = GameObject.Find("Player");
+        source = GetComponent<AudioSource>();
         player = playerObject.GetComponent<Player>();
         crystal = this.transform.Find("Crystal");
         crystalAnim = crystal.transform.Find("Point Light").gameObject.GetComponent<Animator>();
@@ -49,6 +52,8 @@ public class TimeDialActivator : MonoBehaviour, IInteractable
                             player.inventory.RemoveItem(new Item { itemType = Item.ItemType.Crystal, amount = 1});
                             delayOver = false;
                             StartCoroutine(Delay(1f));
+                            source.clip = activateSFX;
+                            source.PlayOneShot(source.clip);
                             crystal.gameObject.SetActive(true);
                             dialHasCrystal = true;
                         }

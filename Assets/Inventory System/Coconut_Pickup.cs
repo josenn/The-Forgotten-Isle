@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Coconut_Pickup : MonoBehaviour
 {
+    public AudioClip pickupSFX;
+
     private void OnTriggerEnter(Collider other)
     {
         
@@ -12,6 +14,7 @@ public class Coconut_Pickup : MonoBehaviour
                 
                     Player player = GameObject.Find("Player").GetComponent<Player>();
                     player.inventory.AddItem(new Item { itemType = Item.ItemType.Coconut, amount = 1});
+                    player.PlayPickup(pickupSFX);
                     this.gameObject.SetActive(false);
                 
             }

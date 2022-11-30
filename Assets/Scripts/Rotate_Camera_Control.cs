@@ -10,10 +10,13 @@ public class Rotate_Camera_Control : MonoBehaviour
     public float turnOnE = -90f;
     public float turnOnQ = 90f;
 
+    public AudioClip turnSFX;
+    private AudioSource source;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -22,9 +25,13 @@ public class Rotate_Camera_Control : MonoBehaviour
         if (!isTurning){
             if (Input.GetKeyDown(KeyCode.Q)){
                 StartCoroutine(RotateCamera(turnOnQ));
+                source.clip = turnSFX;
+                source.PlayOneShot(source.clip);
             }
             if (Input.GetKeyDown(KeyCode.E)){
                 StartCoroutine(RotateCamera(turnOnE));
+                source.clip = turnSFX;
+                source.PlayOneShot(source.clip);
             }
         }
 
