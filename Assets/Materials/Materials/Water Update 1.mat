@@ -78,7 +78,7 @@ Material:
     - _wavesize: 1.2
     - _wavespeed: 0.13
     m_Colors:
-    - _BaseColor: {r: 0.31954432, g: 0.42155883, b: 0.6226415, a: 0}
+    - _BaseColor: {r: 0.15428977, g: 0.22210447, b: 0.41509432, a: 0}
     - _Depth_color: {r: 0.78679246, g: 0.9755392, b: 1, a: 1}
     - _Tiling_amount: {r: 9, g: 9, b: 0, a: 0}
     - _rippleColor: {r: 0.072930716, g: 0.11619487, b: 0.7433325, a: 0}

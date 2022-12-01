@@ -26,14 +26,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1543291270030796278}
-  m_LocalRotation: {x: -0.4095762, y: -0.003996134, z: 0.8151558, w: -0.409576}
-  m_LocalPosition: {x: -0.6666, y: 0.6666, z: 0.6666}
+  m_LocalRotation: {x: -0.40832093, y: -0.00021745266, z: 0.816424, w: -0.40832078}
+  m_LocalPosition: {x: -0.666, y: 0.666, z: 0.666}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7653328532047626765}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 20, y: 315, z: -135}
+  m_LocalEulerAnglesHint: {x: 19.5, y: 315, z: -135}
 --- !u!33 &4682800090313612902
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -500,6 +500,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7653328532047626765}
   - component: {fileID: 6829370405903744940}
+  - component: {fileID: 1856499067281350188}
   m_Layer: 0
   m_Name: sand inner corner
   m_TagString: Untagged
@@ -515,7 +516,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7024988064313235639}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.0000028461216}
-  m_LocalPosition: {x: -646.5129, y: 2.5000012, z: -629.12604}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -561,6 +562,19 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 1cf82f14964c9eb43a8039336e10db63, type: 2}
   - {fileID: 2100000, guid: d90d022f4fb34134babca0a3189e752a, type: 2}
   - {fileID: 0}
+--- !u!135 &1856499067281350188
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7024988064313235639}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8173707972411345303
 GameObject:
   m_ObjectHideFlags: 0
