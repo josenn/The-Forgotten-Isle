@@ -8,6 +8,8 @@ TagManager:
   - Fade
   - Respawn Torch
   - RespawnOnContact
+  - TropicalZone
+  - FrozenZone
   layers:
   - Default
   - TransparentFX
