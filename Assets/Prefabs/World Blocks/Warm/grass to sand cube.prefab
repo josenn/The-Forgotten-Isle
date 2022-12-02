@@ -500,6 +500,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7122224773225449526}
   - component: {fileID: 3455607675710853420}
+  - component: {fileID: 1435682324114198704}
   m_Layer: 0
   m_Name: grass to sand cube
   m_TagString: Untagged
@@ -540,3 +541,33 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1435682324114198704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7610213788228735628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f004ac8eedab834b88bbbc0d1b8d4d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meshesToChange:
+  - {fileID: 7096019021714495381}
+  - {fileID: 7096019021904785216}
+  - {fileID: 7096019022044094325}
+  - {fileID: 7096019020856939638}
+  - {fileID: 7096019021764850482}
+  tropicalMaterials:
+  - {fileID: 2100000, guid: b0d03db3577f8914b9e52315fb3a6482, type: 2}
+  - {fileID: 2100000, guid: 18a20b37951b17048803113051c9988a, type: 2}
+  - {fileID: 2100000, guid: 18a20b37951b17048803113051c9988a, type: 2}
+  - {fileID: 2100000, guid: 18a20b37951b17048803113051c9988a, type: 2}
+  - {fileID: 2100000, guid: 18a20b37951b17048803113051c9988a, type: 2}
+  frozenMaterials:
+  - {fileID: 2100000, guid: 2c09cafd9b032f6479a98dd60d32ba4c, type: 2}
+  - {fileID: 2100000, guid: d90d022f4fb34134babca0a3189e752a, type: 2}
+  - {fileID: 2100000, guid: d90d022f4fb34134babca0a3189e752a, type: 2}
+  - {fileID: 2100000, guid: d90d022f4fb34134babca0a3189e752a, type: 2}
+  - {fileID: 2100000, guid: d90d022f4fb34134babca0a3189e752a, type: 2}

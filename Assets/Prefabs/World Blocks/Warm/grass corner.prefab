@@ -303,6 +303,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5765675000118307488}
+  - component: {fileID: 1797467766393102450}
+  - component: {fileID: 5455381931541852817}
   m_Layer: 0
   m_Name: grass corner
   m_TagString: Untagged
@@ -328,3 +330,40 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &1797467766393102450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6577536332616609818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f004ac8eedab834b88bbbc0d1b8d4d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meshesToChange:
+  - {fileID: 4337271528133865306}
+  - {fileID: 2385879747920489094}
+  - {fileID: 2548042857012995125}
+  tropicalMaterials:
+  - {fileID: 2100000, guid: ce68054b99351304895757ffa0c606d2, type: 2}
+  - {fileID: 2100000, guid: f0f8567ac424d314fb7cb6601268b3d8, type: 2}
+  - {fileID: 2100000, guid: f0f8567ac424d314fb7cb6601268b3d8, type: 2}
+  frozenMaterials:
+  - {fileID: 2100000, guid: 438a952e9bb411141af32888fe0ee754, type: 2}
+  - {fileID: 2100000, guid: 8b8021d82e587c243807877a22affb8b, type: 2}
+  - {fileID: 2100000, guid: 8b8021d82e587c243807877a22affb8b, type: 2}
+--- !u!135 &5455381931541852817
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6577536332616609818}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
