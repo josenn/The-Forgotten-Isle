@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6b3bec5968a4c54591c43182325f7cc, type: 3}
+  m_Name: Sign - Bridge Fin
+  m_EditorClassIdentifier: 
+  dialogue:
+  - 'Welcome to the Grand Opening of my long awaited project: THE COCONUT BRIDGE.
+    - The Castaway'
+  - P.S. - I was only able to finish it with the help of some ancient stones I found.
+    They seem to be magic!
+  - If you're not sure how to get across, try looking at it from a different angle
+    ;)
+  responses: []
