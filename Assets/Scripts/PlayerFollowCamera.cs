@@ -7,6 +7,8 @@ public class PlayerFollowCamera : MonoBehaviour
 
     [SerializeField] float followSpeed = 2f;
     [SerializeField] Transform target;
+
+    public bool lerpFollow = true;
     
     
     
@@ -15,6 +17,11 @@ public class PlayerFollowCamera : MonoBehaviour
     {
         Vector3 newPos = target.position;
 
-        transform.position = Vector3.Slerp(transform.position, newPos, followSpeed * Time.deltaTime);
+        if (lerpFollow){
+            transform.position = Vector3.Slerp(transform.position, newPos, followSpeed * Time.deltaTime);
+        }
+        else{
+            transform.position = newPos;
+        }
     }
 }
