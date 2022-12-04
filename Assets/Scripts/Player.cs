@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     private Vector3 playerVelocity = Vector3.zero;
     [SerializeField] private float playerSpeed = 1.0f;
     [SerializeField] private float jumpHeight = 1.0f;
+    [SerializeField] private float gravityMultiplier = 4f;
     private float gravityValue = -9.81f;
     public Camera playerCamera;
     [SerializeField] DialogueUI dialogueUI;
@@ -23,6 +24,7 @@ public class Player : MonoBehaviour
     bool isStopped = true;
     private bool isJumping = false;
     private bool hasLanded = true;
+    private bool _isRunning = false;
     public bool allowedToMove = true;
     public Inventory inventory;
     [SerializeField] private UI_Inventory uiInventory;
@@ -31,6 +33,8 @@ public class Player : MonoBehaviour
     private TimeDialActivator _timeDial;
     public Animator sunAnim;
     private Respawn_Handler _respawnHandler;
+    public float runSpeed;
+    private float _normalWalkSpeed;
 
     public AudioClip jumpSFX, landSFX, worldChangeSFX;
     public AudioClip[] grassStep, snowStep;
@@ -65,6 +69,7 @@ public class Player : MonoBehaviour
         inventory = new Inventory(); 
         uiInventory.SetInventory(inventory);
         _respawnHandler = GameObject.Find("Respawn Handler").GetComponent<Respawn_Handler>();
+        _normalWalkSpeed = playerSpeed;
     }
 
 
@@ -128,6 +133,16 @@ public class Player : MonoBehaviour
             PlayerMove();
         }
 
+        if (Input.GetKeyDown(KeyCode.LeftShift)){
+            playerSpeed = runSpeed;
+            _isRunning = true;
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift)){
+            playerSpeed = _normalWalkSpeed;
+            _isRunning = false;
+        }
+
+
         if (controller.isGrounded)
         {
             isJumping = false;
@@ -154,6 +169,7 @@ public class Player : MonoBehaviour
             isStopped = false;
         }
         spriteAnimator.SetBool("beenStopped", isStopped);
+        spriteAnimator.SetBool("isRunning", _isRunning);
 
         spriteAnimator.SetFloat("LastMoveHorizontal", lastMoveH);
         spriteAnimator.SetFloat("LastMoveVertical", lastMoveV);
@@ -186,9 +202,9 @@ public class Player : MonoBehaviour
         Vector3 forwardRelativeVerticalInput = Input.GetAxisRaw("Vertical") * GetCameraForward(playerCamera);
         Vector3 rightRelativeHorizontalInput = Input.GetAxisRaw("Horizontal") * GetCameraRight(playerCamera);
         Vector3 addJump = new Vector3(0, playerVelocity.y, 0);
-        Vector3 move = forwardRelativeVerticalInput + rightRelativeHorizontalInput + addJump;
+        Vector3 move = (forwardRelativeVerticalInput * playerSpeed) + (rightRelativeHorizontalInput * playerSpeed) + (addJump * _normalWalkSpeed);
         Vector3 direction = new Vector3 (Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
-        controller.Move(move * Time.deltaTime * playerSpeed);
+        controller.Move(move * Time.deltaTime);
 
         movementX = (Input.GetAxisRaw("Horizontal") * Mathf.Abs(GetCameraRight(playerCamera).x));
         movementZ = (Input.GetAxisRaw("Vertical") * Mathf.Abs(GetCameraForward(playerCamera).z));
@@ -220,7 +236,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump") && controller.isGrounded)
         {
-            playerVelocity.y += Mathf.Sqrt(jumpHeight * -2.0f * gravityValue);
+            playerVelocity.y += Mathf.Sqrt(jumpHeight * -gravityMultiplier * gravityValue);
             isJumping = true;
 
             source.clip = jumpSFX;
