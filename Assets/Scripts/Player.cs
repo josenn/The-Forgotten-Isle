@@ -38,6 +38,8 @@ public class Player : MonoBehaviour
 
     public AudioClip jumpSFX, landSFX, worldChangeSFX;
     public AudioClip[] grassStep, snowStep;
+    public float walkSFXSpeed = 0.3f, runSFXSpeed = 0.1f;
+    private float newStep = 0;
     private AudioSource source;
 
     public DialogueUI DialogueUI => dialogueUI;
@@ -89,7 +91,55 @@ public class Player : MonoBehaviour
                 }
             }
         }
+        
+        if (other.CompareTag("TropicalZone"))
+        {
+            if (newStep <= 0)
+            {
+                if (_isRunning && !isJumping)
+                {
+                    PlayStep(grassStep);
+                    newStep = runSFXSpeed;
+                }
+                else if (isWalking && !isJumping)
+                {
+                    PlayStep(grassStep);
+                    newStep = walkSFXSpeed;
+                }
+            }
+            else
+            {
+                newStep -= Time.deltaTime;
+            }
+        }
+        if (other.CompareTag("FrozenZone"))
+        {
+            if (newStep <= 0)
+            {
+                if (_isRunning && !isJumping)
+                {
+                    PlayStep(snowStep);
+                    newStep = runSFXSpeed;
+                }
+                else if (isWalking && !isJumping)
+                {
+                    PlayStep(snowStep);
+                    newStep = walkSFXSpeed;
+                }
+            }
+            else
+            {
+                newStep -= Time.deltaTime;
+            }
+        }
     }
+
+    private void PlayStep(AudioClip[] footstep)
+    {
+        source.clip = footstep[Random.Range(0, footstep.Length)];
+        source.PlayOneShot(source.clip);
+    }
+
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.CompareTag("RespawnOnContact")){
             
