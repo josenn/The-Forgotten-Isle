@@ -96,7 +96,7 @@ public class Player : MonoBehaviour
         {
             if (newStep <= 0)
             {
-                if (_isRunning && !isJumping)
+                if (_isRunning && isWalking && !isJumping)
                 {
                     PlayStep(grassStep);
                     newStep = runSFXSpeed;
@@ -116,7 +116,7 @@ public class Player : MonoBehaviour
         {
             if (newStep <= 0)
             {
-                if (_isRunning && !isJumping)
+                if (_isRunning && isWalking && !isJumping)
                 {
                     PlayStep(snowStep);
                     newStep = runSFXSpeed;
