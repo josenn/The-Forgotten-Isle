@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6b3bec5968a4c54591c43182325f7cc, type: 3}
+  m_Name: captain introo
+  m_EditorClassIdentifier: 
+  dialogue:
+  - "Ah, a new face! So you\u2019re stuck here too? Well you\u2019re just in time,
+    laddie! I was about to sail off meself, got me old reliable ship Betty here!"
+  - "Except\u2026 Well, I\u2019ll be honest with ya, the waves around this island
+    throws me bravery and stomach for a whirl. Could use something to drink, if ya
+    catch me meaning."
+  - "But unfortunately, I lost me bottles while looking around. Tell ya what, if
+    you find me bottles, I\u2019ll give ya a ride for free. No cost to ya once we
+    hit the mainland."
+  - 'I''ll need 5 bottles to really steady my sea legs. '
+  responses: []
