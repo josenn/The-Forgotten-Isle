@@ -23,7 +23,7 @@ public class TimeDialActivator : MonoBehaviour, IInteractable
     private AudioSource source;
 
     private void Start() {
-        GameObject playerObject = GameObject.Find("Player");
+        GameObject playerObject = GameObject.Find("@Player");
         source = GetComponent<AudioSource>();
         player = playerObject.GetComponent<Player>();
         crystal = this.transform.Find("Crystal");

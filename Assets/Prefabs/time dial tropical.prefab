@@ -541,7 +541,7 @@ GameObject:
   - component: {fileID: 8752212658544472505}
   - component: {fileID: 608191376875362442}
   - component: {fileID: 8609591695704746215}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: UI key sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

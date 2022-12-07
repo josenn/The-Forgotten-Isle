@@ -19,7 +19,6 @@ public class button : MonoBehaviour
     private void OnTriggerStay(Collider other) {
         if (!isMoving) {   
              if (other.gameObject.CompareTag("Player")){
-                Debug.Log("player entered");
                 if (Input.GetKeyDown(KeyCode.F)){
                     StartCoroutine(MoveIt());
                 }

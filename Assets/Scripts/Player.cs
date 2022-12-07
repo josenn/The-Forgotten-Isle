@@ -70,7 +70,7 @@ public class Player : MonoBehaviour
         fadeAnim = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
         inventory = new Inventory(); 
         uiInventory.SetInventory(inventory);
-        _respawnHandler = GameObject.Find("Respawn Handler").GetComponent<Respawn_Handler>();
+        _respawnHandler = GameObject.Find("*Respawn Handler").GetComponent<Respawn_Handler>();
         _normalWalkSpeed = playerSpeed;
     }
 
@@ -247,7 +247,6 @@ public class Player : MonoBehaviour
         }
 
         PlayerJump();
-        
         
         Vector3 forwardRelativeVerticalInput = Input.GetAxisRaw("Vertical") * GetCameraForward(playerCamera);
         Vector3 rightRelativeHorizontalInput = Input.GetAxisRaw("Horizontal") * GetCameraRight(playerCamera);

@@ -14,7 +14,7 @@ public class Respawn_torch : MonoBehaviour
     {
         _respawnPoint = transform.Find("respawn point");
         _blueFire = transform.Find("blue flame").gameObject;
-        _respawnHandler = GameObject.Find("Respawn Handler").GetComponent<Respawn_Handler>();
+        _respawnHandler = GameObject.Find("*Respawn Handler").GetComponent<Respawn_Handler>();
         foreach (GameObject torch in GameObject.FindGameObjectsWithTag("Respawn Torch"))
         {
             _allTorches.Add(torch.GetComponent<Respawn_torch>());

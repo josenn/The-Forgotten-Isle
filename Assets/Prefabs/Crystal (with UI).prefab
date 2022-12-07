@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8116446112707749296}
   - component: {fileID: 261596403778216405}
   - component: {fileID: 1873948334137640390}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: UI key sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

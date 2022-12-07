@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 679993147240079220}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: UI key sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 3622472619065793283}
   - component: {fileID: 370681290137330728}
   - component: {fileID: 912283944795664094}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,9 +104,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1994823187
+  m_SortingLayer: 2
+  m_SortingOrder: 2
   m_Sprite: {fileID: -1994527599, guid: ea44583318feeaa44bcaf08b44005d6f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
