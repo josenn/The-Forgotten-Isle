@@ -36,7 +36,7 @@ public class Player : MonoBehaviour
     public float runSpeed;
     private float _normalWalkSpeed;
 
-    public AudioClip jumpSFX, landSFX, worldChangeSFX;
+    public AudioClip jumpSFX, landSFX, worldChangeSFX, deathSFX;
     public AudioClip[] grassStep, snowStep;
     public float walkSFXSpeed = 0.3f, runSFXSpeed = 0.1f;
     private float newStep = 0;
@@ -148,6 +148,8 @@ public class Player : MonoBehaviour
         }
     }
     private IEnumerator RespawnPlayer(){
+        source.clip = deathSFX;
+        source.PlayOneShot(source.clip);
         allowedToMove = false;
         allowedToInteract = false;
         yield return new WaitForSeconds(0.01f);
