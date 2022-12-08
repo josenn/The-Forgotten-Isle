@@ -15,11 +15,17 @@ public class button : MonoBehaviour
     public Transform locationB;
     Vector3 whereToMoveTo;
 
+    public AudioClip buttonSFX;
+    private AudioSource source;
+
+    private void Start()
+    {
+        source = GetComponent<AudioSource>();
+    }
 
     private void OnTriggerStay(Collider other) {
         if (!isMoving) {   
              if (other.gameObject.CompareTag("Player")){
-                Debug.Log("player entered");
                 if (Input.GetKeyDown(KeyCode.F)){
                     StartCoroutine(MoveIt());
                 }
@@ -31,7 +37,8 @@ public class button : MonoBehaviour
         isMoving = true;
         float elapsedTime = 0f;  
         Vector3 pressDown = new Vector3(0f, 0.5f, 0f);
-
+        source.clip = buttonSFX;
+        source.PlayOneShot(source.clip);
         if (atFirstLocation){
             whereToMoveTo = locationB.position;
             transform.position -= pressDown;

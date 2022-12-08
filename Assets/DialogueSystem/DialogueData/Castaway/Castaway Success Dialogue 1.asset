@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6b3bec5968a4c54591c43182325f7cc, type: 3}
+  m_Name: Castaway Success Dialogue 1
+  m_EditorClassIdentifier: 
+  dialogue:
+  - Aye lad, that'll hit the spot! Thanks for gathering the coconuts for me. As promised,
+    here's that shiny bauble for ya.
+  - "If you head east from here there is another island. There's a Captain who's
+    docked his ship there. \n"
+  - He's a bit of a rude, arrogant drunk if you ask me. But he COULD take you across
+    the water is that's where yer headed.
+  - 'I''ve been working on building a bridge to get across, might be more coconuts
+    over there..........
+
+'
+  - "But unfortunately it's not done yet, and it'll probably take me years to complete!
+    \n"
+  - 'So I''ll guess you''ll just have to learn to love coconuts and boredom, like
+    I have.
+
+'
+  responses: []

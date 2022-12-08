@@ -12,7 +12,7 @@ public class Coconut_Pickup : MonoBehaviour
             if(other.CompareTag("Player"))
             {
                 
-                    Player player = GameObject.Find("Player").GetComponent<Player>();
+                    Player player = GameObject.Find("@Player").GetComponent<Player>();
                     player.inventory.AddItem(new Item { itemType = Item.ItemType.Coconut, amount = 1});
                     player.PlayPickup(pickupSFX);
                     this.gameObject.SetActive(false);

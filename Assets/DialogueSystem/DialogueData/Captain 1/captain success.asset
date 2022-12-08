@@ -10,14 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b6b3bec5968a4c54591c43182325f7cc, type: 3}
-  m_Name: Castaway Success Dialogue 1
+  m_Name: captain success
   m_EditorClassIdentifier: 
   dialogue:
-  - Aye lad, that'll hit the spot! Thanks for gathering the coconuts for me.
-  - As promised, here's that shiny bauble for ya.
-  - "If you head south east there is a Captain with a ship there.  He\u2019s a bit
-    rude and arrogant if you ask me.\r\n"
-  - 'But he could take you across the water if that''s where yer headed.
-
-'
+  - Ah, thank you very much, laddie!
+  - '[The Captain downs the bottles with impressive speed.]'
+  - "*hic* Arr, that\u2019s *hic* much better! *hic* Well laddie, just climb aboard
+    Betty and we\u2019ll be on our way!"
   responses: []

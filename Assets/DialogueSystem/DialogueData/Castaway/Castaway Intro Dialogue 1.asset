@@ -13,13 +13,12 @@ MonoBehaviour:
   m_Name: Castaway Intro Dialogue 1
   m_EditorClassIdentifier: 
   dialogue:
-  - Oh, Hello! Where did you come from?
-  - Oh, well no worries it doesn't really matter.
-  - I've been here for many long years and you might as well be too.
+  - Oh, Hello! Where did you come from? Oh, well no worries it doesn't really matter.
+  - 'I''ve been here for many long years and you might as well be too. '
   - This is the Forgotten Isle. Stay long enough and you'll forget all your worries.
   - If you want, you can stay here and talk with the looney castaway that I am. Or
     explore the Island for yourself.
-  - And if you find any coconuts, come give them to me.
-  - I found this weird gem in the ground and I might be willing to trade.
+  - And if you find any coconuts, come give them to me. I found this weird gem in
+    the ground and I might be willing to trade.
   - 3 Coconuts will do.
   responses: []
