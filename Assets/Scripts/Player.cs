@@ -31,6 +31,7 @@ public class Player : MonoBehaviour
     public bool allowedToInteract = true;
     private Animator fadeWhiteAnim;
     private Animator fadeBlackAnim;
+    private Animator textFadeAnim;
     private TimeDialActivator _timeDial;
     private transport_player _transport;
     public Animator sunAnim;
@@ -71,6 +72,7 @@ public class Player : MonoBehaviour
         source = GetComponent<AudioSource>();
         fadeWhiteAnim = GameObject.FindGameObjectWithTag("FadeWhite").GetComponent<Animator>();
         fadeBlackAnim = GameObject.FindGameObjectWithTag("FadeBlack").GetComponent<Animator>();
+        textFadeAnim = GameObject.FindGameObjectWithTag("TextFade").GetComponent<Animator>();
         inventory = new Inventory(); 
         uiInventory.SetInventory(inventory);
         _respawnHandler = GameObject.Find("*Respawn Handler").GetComponent<Respawn_Handler>();
@@ -102,6 +104,16 @@ public class Player : MonoBehaviour
                     allowedToMove = false;
                     _transport = transport;
                     StartCoroutine(TransportThePlayer());
+                }
+            }
+        }
+        if (other.CompareTag("EndGame")){
+            if (allowedToInteract) {
+                if (Input.GetKeyDown(KeyCode.F)){
+                    allowedToInteract = false;
+                    allowedToMove = false;
+                    fadeBlackAnim.SetTrigger("FadeOut");
+                    textFadeAnim.SetTrigger("FadeText");
                 }
             }
         }

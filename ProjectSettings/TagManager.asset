@@ -12,6 +12,8 @@ TagManager:
   - FadeWhite
   - FadeBlack
   - Transporter
+  - EndGame
+  - TextFade
   layers:
   - Default
   - TransparentFX
