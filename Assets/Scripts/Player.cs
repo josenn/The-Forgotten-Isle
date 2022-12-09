@@ -29,8 +29,10 @@ public class Player : MonoBehaviour
     public Inventory inventory;
     [SerializeField] private UI_Inventory uiInventory;
     public bool allowedToInteract = true;
-    private Animator fadeAnim;
+    private Animator fadeWhiteAnim;
+    private Animator fadeBlackAnim;
     private TimeDialActivator _timeDial;
+    private transport_player _transport;
     public Animator sunAnim;
     private Respawn_Handler _respawnHandler;
     public float runSpeed;
@@ -67,7 +69,8 @@ public class Player : MonoBehaviour
         controller = GetComponent<CharacterController>();
         playerSprite = GetComponent<SpriteRenderer>();
         source = GetComponent<AudioSource>();
-        fadeAnim = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
+        fadeWhiteAnim = GameObject.FindGameObjectWithTag("FadeWhite").GetComponent<Animator>();
+        fadeBlackAnim = GameObject.FindGameObjectWithTag("FadeBlack").GetComponent<Animator>();
         inventory = new Inventory(); 
         uiInventory.SetInventory(inventory);
         _respawnHandler = GameObject.Find("*Respawn Handler").GetComponent<Respawn_Handler>();
@@ -88,6 +91,17 @@ public class Player : MonoBehaviour
                         source.PlayOneShot(source.clip);
                         StartCoroutine(TimeDialEffects());
                     }
+                }
+            }
+        }
+        if (other.CompareTag("Transporter")){
+            transport_player transport = other.gameObject.GetComponent<transport_player>();
+            if (allowedToInteract) {
+                if (Input.GetKeyDown(KeyCode.F)){
+                    allowedToInteract = false;
+                    allowedToMove = false;
+                    _transport = transport;
+                    StartCoroutine(TransportThePlayer());
                 }
             }
         }
@@ -159,16 +173,25 @@ public class Player : MonoBehaviour
         allowedToInteract = true;
     }
 
-    
+    private IEnumerator TransportThePlayer(){
+        fadeBlackAnim.SetTrigger("FadeOut");
+        yield return new WaitForSeconds(3f);
+        transform.position = _transport.destination.position;
+        yield return new WaitForSeconds(3f);
+        fadeBlackAnim.SetTrigger("FadeIn");
+        yield return new WaitForSeconds(3f);
+        allowedToInteract = true;
+        allowedToMove = true;
+    }
 
     private IEnumerator TimeDialEffects(){
         sunAnim.SetTrigger("SpinSun");
         yield return new WaitForSeconds(1f);
-        fadeAnim.SetTrigger("FadeOut");
+        fadeWhiteAnim.SetTrigger("FadeOut");
         yield return new WaitForSeconds(2f);
         transform.position = _timeDial.teleportDestination.position;
         yield return new WaitForSeconds(1f);
-        fadeAnim.SetTrigger("FadeIn");
+        fadeWhiteAnim.SetTrigger("FadeIn");
         yield return new WaitForSeconds(1f);
         allowedToMove = true;
         allowedToInteract = true;

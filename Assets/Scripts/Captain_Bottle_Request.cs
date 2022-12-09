@@ -8,6 +8,7 @@ public class Captain_Bottle_Request : MonoBehaviour, IInteractable
     [SerializeField] private DialogueObject idleIntroDialogue;
     [SerializeField] private DialogueObject successDialogue;
     [SerializeField] private DialogueObject idleDialogue;
+    [SerializeField] private GameObject _transporter;
     private Item item = null;
     bool gotTheBottles = false;
     bool seenIntroDia = false;
@@ -37,6 +38,7 @@ public class Captain_Bottle_Request : MonoBehaviour, IInteractable
                 player.DialogueUI.ShowDialogue(successDialogue);
                 player.inventory.RemoveItem(new Item { itemType = Item.ItemType.Bottle, amount = 5});
                 gotTheBottles = true;
+                _transporter.SetActive(true);
 
             } else if (!seenIntroDia){
             player.DialogueUI.ShowDialogue(introDialogue);

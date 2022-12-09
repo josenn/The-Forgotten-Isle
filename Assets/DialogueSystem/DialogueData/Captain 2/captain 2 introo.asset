@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6b3bec5968a4c54591c43182325f7cc, type: 3}
+  m_Name: captain 2 introo
+  m_EditorClassIdentifier: 
+  dialogue:
+  - '*hic* Arr, dammit! *hic* Ran aground! There''s somethin about these Seas, doesn''t
+    seem to want us to leave....'
+  - Couldn't have been my fault, I'm in peak physical and mental confission! [His
+    left eyelid droops]
+  - 'Anyway, we''re gonna have to fix ''er up, laddie. *hic* '
+  - "I need ya to look around for some wood. 3 pieces should do. Now go, so we can
+    get off this cursed isle! *hic*\r"
+  responses: []

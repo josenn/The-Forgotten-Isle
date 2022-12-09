@@ -5,11 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - TimeDial
-  - Fade
   - Respawn Torch
   - RespawnOnContact
   - TropicalZone
   - FrozenZone
+  - FadeWhite
+  - FadeBlack
+  - Transporter
   layers:
   - Default
   - TransparentFX
